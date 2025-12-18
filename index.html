@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slingers - Slingin' Cards, Buildin' Hands, and Takin' Names</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Slingers Logo" class="logo-image">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#legend" class="nav-link">The Legend</a></li>
+                <li><a href="#showdown" class="nav-link">The Showdown</a></li>
+                <li><a href="#slingers" class="nav-link">The Slingers</a></li>
+                <li><a href="#trail" class="nav-link">The Trail</a></li>
+                <li><a href="#posse" class="nav-link">Join the Posse</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="assets/logo.png" alt="Slingers" class="hero-logo">
+            <p class="hero-tagline">Slingin' Cards, Buildin' Hands, and Takin' Names</p>
+            <p class="hero-subtitle">A tactical board game of frontier duels where positioning, cards, and cunning determine who becomes a legend</p>
+            <a href="#showdown" class="cta-button">Learn to Play</a>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <section id="legend" class="section legend-section">
+        <div class="container">
+            <h2 class="section-title">The Legend</h2>
+            <div class="legend-content">
+                <div class="legend-text">
+                    <p class="intro-text">The frontier is unforgiving. Only the smartest, fastest, and most cunning
+                        Slingers survive the deadly duels that forge legends.</p>
+
+                    <p>Navigate the board strategically, equip powerful weapons and equipment, mount trusty steeds, and
+                        use
+                        action cards wisely to outmaneuver your opponents in tactical showdowns.</p>
+
+                    <p>Every location offers new opportunities. Every card drawn could change your fate. Every die roll
+                        could
+                        be your last.</p>
+
+                    <div class="legend-objective">
+                        <strong>Game Overview:</strong>
+                        <ul>
+                            <li>Move across the grid-based game board</li>
+                            <li>Each player starts with 99 health (customizable for faster games)</li>
+                            <li>Use cards strategically to attack, defend, and survive</li>
+                            <li>Last Slinger standing wins the duel!</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="legend-image">
+                    <div class="placeholder-card">
+                        <div class="game-stats">
+                            <div class="stat">🎲 Dice-Driven Combat</div>
+                            <div class="stat">🗺️ Grid-Based Movement</div>
+                            <div class="stat">🎴 90 Unique Cards</div>
+                            <div class="stat">🤠 10 Characters</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="showdown" class="section showdown-section">
+        <div class="container">
+            <h2 class="section-title">How to Play</h2>
+            <p class="section-intro">Master the cards, control the board, survive the duel</p>
+
+            <div class="setup-section">
+                <h3 class="steps-title">Game Setup</h3>
+                <div class="setup-grid">
+                    <div class="setup-step">
+                        <div class="setup-icon">🤠</div>
+                        <h4>Choose Your Slinger</h4>
+                        <p>Each player selects a character and takes their player piece and character info card</p>
+                    </div>
+                    <div class="setup-step">
+                        <div class="setup-icon">🗺️</div>
+                        <h4>Prepare the Board</h4>
+                        <p>Place 4 location cards on the map, aligning their grids with the game board</p>
+                    </div>
+                    <div class="setup-step">
+                        <div class="setup-icon">🎲</div>
+                        <h4>Determine Turn Order</h4>
+                        <p>Roll a six-sided die to decide who goes first</p>
+                    </div>
+                    <div class="setup-step">
+                        <div class="setup-icon">🎴</div>
+                        <h4>Deal Starting Hands</h4>
+                        <p>Each player draws 5 cards. Start with 99 health (or choose lower for a faster game)</p>
+                    </div>
+                    <div class="setup-step">
+                        <div class="setup-icon">📍</div>
+                        <h4>Place Characters</h4>
+                        <p>First player places their piece anywhere on the map, then clockwise each player does the same
+                        </p>
+                    </div>
+                    <div class="setup-step">
+                        <div class="setup-icon">⚔️</div>
+                        <h4>Begin the Duel!</h4>
+                        <p>You're ready to face off in the ultimate Slinger showdown</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-showcase">
+                <h3 class="steps-title">Card Types</h3>
+                <div class="card-type">
+                    <div class="card-icon">
+                        <img src="assets/icons/action.png" alt="Action" class="icon-image">
+                    </div>
+                    <h3>Action Cards</h3>
+                    <p>Use during your turn before declaring attack phase. Play as many as you want to set up your strategy.</p>
+                </div>
+                
+                <div class="card-type">
+                    <div class="card-icon">
+                        <img src="assets/icons/weapon.png" alt="Weapon" class="icon-image">
+                    </div>
+                    <h3>Weapons</h3>
+                    <p>Equip during setup or your turn. Swap weapons anytime before attack phase. Features attributes like Max Damage, Falloff, Melee, Dual Wield, and Cut Rope.</p>
+                </div>
+                
+                <div class="card-type">
+                    <div class="card-icon">
+                        <img src="assets/icons/equipment.png" alt="Equipment" class="icon-image">
+                    </div>
+                    <h3>Equipment</h3>
+                    <p>Equip during setup or before attack phase. No limit to equipment worn, but once equipped, cannot be unequipped.</p>
+                </div>
+                
+                <div class="card-type">
+                    <div class="card-icon">
+                        <img src="assets/icons/reaction.png" alt="Reaction" class="icon-image">
+                    </div>
+                    <h3>Reaction Cards</h3>
+                    <p>Use during attack phase when you're the target or the attacker. Perfect for turning the tables!</p>
+                </div>
+                
+                <div class="card-type">
+                    <div class="card-icon">
+                        <img src="assets/icons/steed.png" alt="Steed" class="icon-image">
+                    </div>
+                    <h3>Steeds</h3>
+                    <p>Equip for bonus health and increased movement speed. Movement = dice roll × speed attribute. When attacked, steed takes damage first.</p>
+                </div>
+                
+                <div class="card-type">
+                    <div class="card-icon">
+                        <img src="assets/icons/health.png" alt="Health" class="icon-image">
+                    </div>
+                    <h3>Health Cards</h3>
+                    <p>Play anytime except during attack phase (even when jailed or hogtied!). Cannot heal past maximum health or heal steeds.</p>
+                </div>
+                
+                <div class="card-type">
+                    <div class="card-icon">
+                        <img src="assets/icons/illness.png" alt="Illness" class="icon-image">
+                    </div>
+                    <h3>Illness Cards</h3>
+                    <p>Must be revealed immediately when drawn. Negative effects apply to you. If dealt in starting hand, discard and draw a new card.</p>
+                </div>
+            </div>
+
+            <div class="attributes-section">
+                <h3 class="steps-title">Weapon & Card Attributes</h3>
+                <div class="attributes-grid">
+                    <div class="attribute-card">
+                        <h4><img src="assets/icons/melee.png" alt="Melee" class="inline-icon"> Melee</h4>
+                        <p>Can only be used at distance 0. Can be thrown for max damage in a single hit—target receives the weapon if hit, discarded if dodged.</p>
+                    </div>
+                    
+                    <div class="attribute-card">
+                        <h4><img src="assets/icons/weapon.png" alt="Dual Wield" class="inline-icon"> Dual Wield</h4>
+                        <p>Equip two weapons with this attribute. Declare one as primary, roll normally, then reroll one die for the second weapon's attack.</p>
+                    </div>
+                    
+                    <div class="attribute-card">
+                        <h4><img src="assets/icons/cutrope.png" alt="Cut Rope" class="inline-icon"> Cut Rope</h4>
+                        <p>Can cut rope cards. If equipped, keep the weapon. If in hand, cut the rope but discard the weapon.</p>
+                    </div>
+                    
+                    <div class="attribute-card">
+                        <h4><img src="assets/icons/maxdamage.png" alt="Max Damage" class="inline-icon"> Max Damage</h4>
+                        <p>The maximum damage a weapon can deal in a single attack.</p>
+                    </div>
+                    
+                    <div class="attribute-card">
+                        <h4><img src="assets/icons/falloff.png" alt="Falloff" class="inline-icon"> Falloff</h4>
+                        <p>Distance penalty. Falloff value × distance from target = total falloff damage reduction.</p>
+                    </div>
+                    
+                    <div class="attribute-card">
+                        <h4><img src="assets/icons/steed.png" alt="Speed" class="inline-icon"> Speed</h4>
+                        <p>Steed attribute. Your movement = dice roll × speed. Higher speed = greater mobility!</p>
+                    </div>
+                    
+                    <div class="attribute-card">
+                        <h4><img src="assets/icons/health.png" alt="Health" class="inline-icon"> Health</h4>
+                        <p>Health value of cards like steeds. Stacks on top of your health and takes damage first.</p>
+                    </div>
+                    
+                    <div class="attribute-card">
+                        <h4><img src="assets/icons/rope.png" alt="Rope" class="inline-icon"> Rope</h4>
+                        <p>Indicates a card is a rope restraint that can be cut by weapons with Cut Rope attribute.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-components">
+                <h3 class="steps-title">What's in the Box</h3>
+                <div class="components-grid">
+                    <div class="component">1 Game Board</div>
+                    <div class="component">4 Location Cards</div>
+                    <div class="component">90 Game Cards</div>
+                    <div class="component">2 Six-Sided Dice</div>
+                    <div class="component">1 Four-Sided Die</div>
+                    <div class="component">10 Player Pieces</div>
+                    <div class="component">10 Player Stands</div>
+                    <div class="component">10 Character Info Cards</div>
+                    <div class="component">1 Rule Booklet</div>
+                </div>
+            </div>
+
+            <div class="showdown-steps">
+                <h3 class="steps-title">Taking Your Turn</h3>
+                <div class="turn-flow">
+                    <div class="turn-step">
+                        <div class="turn-number">1</div>
+                        <h4>Draw Phase</h4>
+                        <p>Start your turn by drawing a card from the deck.</p>
+                    </div>
+                    
+                    <div class="turn-arrow">→</div>
+                    
+                    <div class="turn-step">
+                        <div class="turn-number">2</div>
+                        <h4>Action Phase</h4>
+                        <p>Play as many action cards as you want. Switch out weapons, equip weapons, and use equipment powers. Repeat as many times as you want before attack phase.</p>
+                    </div>
+                    
+                    <div class="turn-arrow">→</div>
+                    
+                    <div class="turn-step">
+                        <div class="turn-number">3</div>
+                        <h4>Movement Phase</h4>
+                        <p>At any point before attack phase, roll the 4-sided die for movement and move according to movement rules.</p>
+                    </div>
+                    
+                    <div class="turn-arrow">→</div>
+                    
+                    <div class="turn-step">
+                        <div class="turn-number">4</div>
+                        <h4>Attack Phase (Optional)</h4>
+                        <p>Declare an attack on a player. Allow them time to play reaction cards, then roll for attack following attack rules. Once attack phase begins, your turn ends.</p>
+                    </div>
+                    
+                    <div class="turn-arrow">→</div>
+                    
+                    <div class="turn-step">
+                        <div class="turn-number">5</div>
+                        <h4>End Turn</h4>
+                        <p>You can choose to end your turn at any point. At the end of your turn, if you have more than 6 cards, discard down to 6.</p>
+                    </div>
+                </div>
+                
+                <div class="turn-notes">
+                    <h4>Important Notes:</h4>
+                    <ul>
+                        <li>You can end your turn at any point</li>
+                        <li>Attack phase is optional - you don't have to attack</li>
+                        <li>Once you enter attack phase, your turn ends immediately after</li>
+                        <li>Hand limit is 6 cards at end of turn</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="combat-section">
+                <h3 class="steps-title">Attacking - The Duel</h3>
+                <p class="section-intro">Attacking in Slingers works like a duel. Even if you are the "attacker," you are also being attacked by your target.</p>
+                
+                <div class="combat-steps">
+                    <div class="combat-step">
+                        <div class="step-number">1</div>
+                        <h4>Declare Target</h4>
+                        <p>Declare your target for attack and allow them time to play reaction cards. As the attacker, you may also play "Dodge" and dodge equivalent cards (e.g., "Perfect Dodge").</p>
+                    </div>
+                    
+                    <div class="combat-step">
+                        <div class="step-number">2</div>
+                        <h4>Roll the Dice</h4>
+                        <p>Roll both 6-sided dice. The numbers rolled indicate the number of shots hit for the attack. The attacker takes the higher roll, the target takes the lower roll.</p>
+                    </div>
+                    
+                    <div class="combat-step">
+                        <div class="step-number">3</div>
+                        <h4>Calculate Damage</h4>
+                        <p>Apply any shots hit modifiers (equipment, etc.) to get total shots hit.</p>
+                    </div>
+                </div>
+
+                <div class="damage-calculation">
+                    <h4>Damage Calculation Formula</h4>
+                    <div class="formula-steps">
+                        <div class="formula-step">
+                            <strong>Step 1: Calculate Falloff</strong>
+                            <p>Distance from target × Weapon Falloff = Total Falloff</p>
+                        </div>
+                        <div class="formula-step">
+                            <strong>Step 2: Damage Per Shot</strong>
+                            <p>Max Damage - Total Falloff = Damage Per Shot</p>
+                        </div>
+                        <div class="formula-step">
+                            <strong>Step 3: Total Damage</strong>
+                            <p>Shots Hit × Damage Per Shot = Total Damage</p>
+                        </div>
+                        <div class="formula-step">
+                            <strong>Step 4: Apply Damage</strong>
+                            <p>Subtract total damage from target's health</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movement-section">
+                <h3 class="steps-title">Movement</h3>
+                
+                <div class="movement-rules">
+                    <div class="movement-rule">
+                        <h4>📍 Roll for Movement</h4>
+                        <p>During your turn, use the 4-sided die to get your movement roll.</p>
+                    </div>
+                    
+                    <div class="movement-rule">
+                        <h4>⚡ Apply Modifiers</h4>
+                        <p>Apply any buffs to your movement (steeds, equipment, etc.) to get your final maximum movement.</p>
+                    </div>
+                    
+                    <div class="movement-rule">
+                        <h4>🧭 Free Direction</h4>
+                        <p>You can move in any direction you would like and even change directions throughout your movement. Move horizontally, vertically, and diagonally.</p>
+                    </div>
+                    
+                    <div class="movement-rule">
+                        <h4>🚫 Movement Restrictions</h4>
+                        <p>You cannot move through a square occupied by another player and you cannot land in a square occupied by another player.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="winning-section">
+                <h3 class="steps-title">Winning the Game</h3>
+                <div class="winning-content">
+                    <div class="win-condition">
+                        <h4>Victory Condition</h4>
+                        <p>To win the game, you must be the last person standing. When a player's health hits 0, they are no longer in the game.</p>
+                    </div>
+                    
+                    <div class="tie-condition">
+                        <h4>⚖️ Tie Game</h4>
+                        <p>A game can end in a tie if the last 2 players' health hit 0 during the final attack (attack target's damage is still applied to the attacker even if the target's health hits 0).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="death-section">
+                <h3 class="steps-title">Death</h3>
+                <div class="death-steps">
+                    <div class="death-step">
+                        <div class="step-number">1</div>
+                        <h4>Player Eliminated</h4>
+                        <p>When a player's health hits 0, they are out of the game. Remove their game piece from the board.</p>
+                    </div>
+                    
+                    <div class="death-step">
+                        <div class="step-number">2</div>
+                        <h4>Loot the Corpse</h4>
+                        <p>Starting with the player who dealt the finishing blow and continuing in the order of play, each player can select 1 card from the dead player's cards (equipped cards as well as cards from their hand).</p>
+                    </div>
+                    
+                    <div class="death-step">
+                        <div class="step-number">3</div>
+                        <h4>Clean Up</h4>
+                        <p>Discard any extra cards from the dead player. Make sure every player discards back down to 6 or less cards.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="locations-section">
+                <h3 class="steps-title">Locations on the Map</h3>
+                <p class="section-intro">Strategic buildings offer unique advantages and restrictions</p>
+                
+                <div class="locations-grid">
+                    <div class="location-card jail-card">
+                        <div class="location-icon">
+                            <img src="assets/buildings/jail.png" alt="Jail" class="location-image">
+                        </div>
+                        <h4>Jail</h4>
+                        <ul class="location-rules">
+                            <li>A player may only enter jail if sent there by a card</li>
+                            <li>While in jail, you can only use health cards or cards that can be used to get out of jail</li>
+                            <li>Get out of jail cards must be used as soon as you enter jail</li>
+                            <li>The standard jail sentence is 1 turn unless specified otherwise</li>
+                            <li>Cards that change your location (e.g., "Last Call") can get you out of jail if used by another player</li>
+                            <li>You can be attacked while in jail</li>
+                            <li>After the player who sent you to jail completes their next turn, your sentence is over and you must move 1 square to leave the jail</li>
+                        </ul>
+                    </div>
+
+                    <div class="location-card trading-card">
+                        <div class="location-icon">
+                            <img src="assets/buildings/trading.png" alt="Trading Post" class="location-image">
+                        </div>
+                        <h4>Trading Post</h4>
+                        <ul class="location-rules">
+                            <li>Trading in the game is only allowed if both players are in the trading post</li>
+                            <li>Players can freely enter and leave the trading post</li>
+                            <li>Players cannot attack or be attacked while in the trading post</li>
+                        </ul>
+                    </div>
+
+                    <div class="location-card saloon-card">
+                        <div class="location-icon">
+                            <img src="assets/buildings/saloon.png" alt="Saloon" class="location-image">
+                        </div>
+                        <h4>Saloon</h4>
+                        <ul class="location-rules">
+                            <li>Players can freely enter and leave the saloon</li>
+                            <li>While in the saloon during your turn, you may discard as many cards as you would like and receive 5 health for each card you discard</li>
+                            <li>Players in the saloon can only attack and be attacked by other players in the saloon</li>
+                        </ul>
+                    </div>
+
+                    <div class="location-card emporium-card">
+                        <div class="location-icon">
+                            <img src="assets/buildings/jacks.png" alt="Jack's Firearm Emporium" class="location-image">
+                        </div>
+                        <h4>Jack's Firearm Emporium</h4>
+                        <ul class="location-rules">
+                            <li>Players can freely enter and leave Jack's Firearm Emporium</li>
+                            <li>While in the emporium during your turn, you can discard 3 cards to go through the deck and choose any weapon card to add to your hand. Shuffle the deck after this</li>
+                            <li>Players can attack and be attacked by anyone in Jack's Firearm Emporium</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="showdown-steps">
+                <h3 class="steps-title">How a Round Works</h3>
+                <div class="round-flow">
+                    <div class="round-step">
+                        <div class="round-number">1</div>
+                        <h4>Starting the Round</h4>
+                        <p>Each player ensures they have 99 health. Refresh any used cards. Determine first player if not already decided.</p>
+                    </div>
+                    
+                    <div class="round-arrow">→</div>
+                    
+                    <div class="round-step">
+                        <div class="round-number">2</div>
+                        <h4>Player Turns</h4>
+                        <p>Players take turns in order. On your turn, follow the steps in "Taking Your Turn".</p>
+                    </div>
+                    
+                    <div class="round-arrow">→</div>
+                    
+                    <div class="round-step">
+                        <div class="round-number">3</div>
+                        <h4>Ending the Round</h4>
+                        <p>The round ends when a player reaches 0 health or after a set number of turns. Determine rewards or penalties.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="slingers" class="section slingers-section">
+        <div class="container">
+            <h2 class="section-title">The Slingers</h2>
+            <p class="section-intro">Ten unique gunslingers, each with their own story, style, and reason to fight</p>
+            
+            <div class="slingers-grid">
+                <div class="slinger-card" onclick="this.classList.toggle('flipped')">
+                    <div class="slinger-card-inner">
+                        <div class="slinger-card-front">
+                            <div class="slinger-portrait">
+                                <img src="assets/characters/menk.png" alt="Menk" class="character-image">
+                            </div>
+                            <div class="slinger-info">
+                                <h3 class="slinger-name">Menk</h3>
+                                <p class="slinger-bio">A young wannabe hero—it's no surprise. He was told his entire life his dad was a true war hero, how can a guy not idolize something like that. He wears his father's gear like some kinda ghost of justice. Truth be told, he's a good shot and he's killed before—defending a friend.</p>
+                            </div>
+                        </div>
+                        <div class="slinger-card-back">
+                            <div class="ability-content">
+                                <h3 class="slinger-name">Menk</h3>
+                                <h4 class="ability-title">Special Ability</h4>
+                                <p class="ability-text">When involved in combat, roll a 6-sided die:<br><br>
+                                1-4: Nothing happens<br>
+                                5+: Dodge the attack avoiding all incoming damage</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slinger-card" onclick="this.classList.toggle('flipped')">
+                    <div class="slinger-card-inner">
+                        <div class="slinger-card-front">
+                            <div class="slinger-portrait">
+                                <img src="assets/characters/daliore.png" alt="Daliore" class="character-image">
+                            </div>
+                            <div class="slinger-info">
+                                <h3 class="slinger-name">Daliore</h3>
+                                <p class="slinger-bio">Not gonna lie, she's kind of a psycho. One minute she's a good flirt and drinking buddy, next second she's got two revolvers pressed to your temple. You can't predict what you'll do that will send her off into a rampage. They used to send her in alone to clear out enemy strongholds—she had a better temper then.</p>
+                            </div>
+                        </div>
+                        <div class="slinger-card-back">
+                            <div class="ability-content">
+                                <h3 class="slinger-name">Daliore</h3>
+                                <h4 class="ability-title">Special Ability</h4>
+                                <p class="ability-text">Equipment card abilities are always guaranteed.<br><br>
+                                When under half health:<br>
+                                +1 to attack roll</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slinger-card" onclick="this.classList.toggle('flipped')">
+                    <div class="slinger-card-inner">
+                        <div class="slinger-card-front">
+                            <div class="slinger-portrait">
+                                <img src="assets/characters/sabja.png" alt="Sabja" class="character-image">
+                            </div>
+                            <div class="slinger-info">
+                                <h3 class="slinger-name">Sabja</h3>
+                                <p class="slinger-bio">In a land of gunpowder and steel, Sabja is an anomaly. A silent warrior who prefers to speak with his fists. His origins are as mysterious as the desert mirages, but his deadly, dance-like fighting style can disarm a gunslinger in the blink of an eye. He is a phantom of the frontier, a living testament that the quickest hand in the West doesn't always belong to a gunman.</p>
+                            </div>
+                        </div>
+                        <div class="slinger-card-back">
+                            <div class="ability-content">
+                                <h3 class="slinger-name">Sabja</h3>
+                                <h4 class="ability-title">Special Ability</h4>
+                                <p class="ability-text">Punches do 3 damage<br><br>
+                                +1 damage with melee weapons<br><br>
+                                +1 to movement roll for each equipped melee weapon</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slinger-card" onclick="this.classList.toggle('flipped')">
+                    <div class="slinger-card-inner">
+                        <div class="slinger-card-front">
+                            <div class="slinger-portrait">
+                                <img src="assets/characters/ruby.png" alt="Ruby" class="character-image">
+                            </div>
+                            <div class="slinger-info">
+                                <h3 class="slinger-name">Ruby</h3>
+                                <p class="slinger-bio">The young barkeep—quite the firecracker for such a small little miss. Her Pa used to run the good saloon, 'til he got himself into some trouble in a card game with some circus folk, left all the duties of the watering hole to his only daughter. Ruby won't start the fight, but she'll sure finish it, especially to protect her saloon and her town.</p>
+                            </div>
+                        </div>
+                        <div class="slinger-card-back">
+                            <div class="ability-content">
+                                <h3 class="slinger-name">Ruby</h3>
+                                <h4 class="ability-title">Special Ability</h4>
+                                <p class="ability-text">Discard a card in the saloon for +10 health<br><br>
+                                If last call is played go through the deck and pick any card then reshuffle<br><br>
+                                +1 to attack roll if in the saloon</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slinger-card" onclick="this.classList.toggle('flipped')">
+                    <div class="slinger-card-inner">
+                        <div class="slinger-card-front">
+                            <div class="slinger-portrait">
+                                <img src="assets/characters/noises.png" alt="Noises" class="character-image">
+                            </div>
+                            <div class="slinger-info">
+                                <h3 class="slinger-name">Noises</h3>
+                                <p class="slinger-bio">Another mystery. Sure, he's a talkative enough fella, lots of brief words of wisdom to give, but I'm not sure even he remembers his past. Many pin him to be a "soul walker" or some kinda shaman, and who can blame them? The dude walks blindfolded with no guide, and he knows exactly where to look when he wants to talk to you—a little spooky.</p>
+                            </div>
+                        </div>
+                        <div class="slinger-card-back">
+                            <div class="ability-content">
+                                <h3 class="slinger-name">Noises</h3>
+                                <h4 class="ability-title">Special Ability</h4>
+                                <p class="ability-text">-1 to opponents attack roll<br><br>
+                                When attacking, if roll is 6+, there is no falloff.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slinger-card" onclick="this.classList.toggle('flipped')">
+                    <div class="slinger-card-inner">
+                        <div class="slinger-card-front">
+                            <div class="slinger-portrait">
+                                <img src="assets/characters/fhangs.png" alt="Fhangs" class="character-image">
+                            </div>
+                            <div class="slinger-info">
+                                <h3 class="slinger-name">Fhangs</h3>
+                                <p class="slinger-bio">He's one of those Lonely Wanderer type fellas, hiking town to town, hobble to hobble, mostly getting by on his own two feet. This tall son of a gun is not too keen to being questioned, he don't really talk much to begin with. He walks like an upright frog with his massive grit covered shotgun slung on his shoulder, and he will rip your torso in half without batting an eye.</p>
+                            </div>
+                        </div>
+                        <div class="slinger-card-back">
+                            <div class="ability-content">
+                                <h3 class="slinger-name">Fhangs</h3>
+                                <h4 class="ability-title">Special Ability</h4>
+                                <p class="ability-text">Can use "Double Barrel Shotgun" from up to 5 squares away<br><br>
+                                +2 to attack roll when "Double Barrel Shotgun" is equipped<br><br>
+                                +1 to movement roll if not equipped</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slinger-card" onclick="this.classList.toggle('flipped')">
+                    <div class="slinger-card-inner">
+                        <div class="slinger-card-front">
+                            <div class="slinger-portrait">
+                                <img src="assets/characters/fereen.png" alt="Fereen" class="character-image">
+                            </div>
+                            <div class="slinger-info">
+                                <h3 class="slinger-name">Fereen</h3>
+                                <p class="slinger-bio">The boss lady—a truly menacing figure. Her prissy outfit is always pristine and starchy and if you cause even a spec of stain to fall upon her person, you will be met with adversity like you've never seen before. She is an owner, a proprietor and a fierce opponent to any who try to muddy up her prim and pristine operations.</p>
+                            </div>
+                        </div>
+                        <div class="slinger-card-back">
+                            <div class="ability-content">
+                                <h3 class="slinger-name">Fereen</h3>
+                                <h4 class="ability-title">Special Ability</h4>
+                                <p class="ability-text">Discard any card to leave jail<br><br>
+                                Any time you deal damage to another player, attacked player must give you a card of their choice (excluding illness cards).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slinger-card" onclick="this.classList.toggle('flipped')">
+                    <div class="slinger-card-inner">
+                        <div class="slinger-card-front">
+                            <div class="slinger-portrait">
+                                <img src="assets/characters/ghala.png" alt="Ghala" class="character-image">
+                            </div>
+                            <div class="slinger-info">
+                                <h3 class="slinger-name">Ghala</h3>
+                                <p class="slinger-bio">An agent, living as a soldier of fortune. She's spent her life as a warrior for her own purposes, mainly as a means to survive. Contracts and bloodshed mean shelter and a warm meal. Connection is not worth her time and her collection of books picked off corpses is ever growing.</p>
+                            </div>
+                        </div>
+                        <div class="slinger-card-back">
+                            <div class="ability-content">
+                                <h3 class="slinger-name">Ghala</h3>
+                                <h4 class="ability-title">Special Ability</h4>
+                                <p class="ability-text">When only wielding a single weapon:<br>
+                                -0.5 to falloff<br>
+                                +1 to damage per shot</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slinger-card" onclick="this.classList.toggle('flipped')">
+                    <div class="slinger-card-inner">
+                        <div class="slinger-card-front">
+                            <div class="slinger-portrait">
+                                <img src="assets/characters/panch.png" alt="Panch" class="character-image">
+                            </div>
+                            <div class="slinger-info">
+                                <h3 class="slinger-name">Panch</h3>
+                                <p class="slinger-bio">You gotta love this guy. Don't speak a lick of English, but if he sizes you up to be a good fella, he'll be your friend till the end of time. A true enjoyer of life, he wears the flashiest clothing his daughters can create and loves nothing more than to stop and have a meal with companions.</p>
+                            </div>
+                        </div>
+                        <div class="slinger-card-back">
+                            <div class="ability-content">
+                                <h3 class="slinger-name">Panch</h3>
+                                <h4 class="ability-title">Special Ability</h4>
+                                <p class="ability-text">-2 to movement roll<br><br>
+                                -2 to opponents attack roll<br><br>
+                                Health cards grant an additional +5 health</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slinger-card" onclick="this.classList.toggle('flipped')">
+                    <div class="slinger-card-inner">
+                        <div class="slinger-card-front">
+                            <div class="slinger-portrait">
+                                <img src="assets/characters/treech.png" alt="Treech" class="character-image">
+                            </div>
+                            <div class="slinger-info">
+                                <h3 class="slinger-name">Treech</h3>
+                                <p class="slinger-bio">A slippery little blood sucker. He may act tough with his big sister standing besides him, but this greasy con man is as two-faced and cowardly as they come. That crooked smile is always just to distract you from whatever twisted thing he's planning.</p>
+                            </div>
+                        </div>
+                        <div class="slinger-card-back">
+                            <div class="ability-content">
+                                <h3 class="slinger-name">Treech</h3>
+                                <h4 class="ability-title">Special Ability</h4>
+                                <p class="ability-text">Can roll for movement before and after attacking<br><br>
+                                If a target dodges your attack, roll a 6-sided die:<br>
+                                1-2: Nothing<br>
+                                3+: You also dodge the attack</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="trail" class="section trail-section">
+        <div class="container">
+            <h2 class="section-title">The Trail</h2>
+            <p class="section-intro">Follow the development journey and get exclusive Slinger Spotlights</p>
+
+            <div class="blog-grid">
+                <article class="blog-post">
+                    <div class="blog-date">Coming Soon</div>
+                    <h3>Slinger Spotlight: The Quickdraw</h3>
+                    <p>Discover the fastest hand in the West and the deadly tactics that make The Quickdraw a force to
+                        be
+                        reckoned with.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </article>
+
+                <article class="blog-post">
+                    <div class="blog-date">Coming Soon</div>
+                    <h3>Behind the Cards: Designing the Showdown</h3>
+                    <p>A look at how we balanced risk and reward in the core card mechanics of Slingers.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </article>
+
+                <article class="blog-post">
+                    <div class="blog-date">Coming Soon</div>
+                    <h3>Character Art Reveal: Week 1</h3>
+                    <p>Get an exclusive first look at the incredible artwork bringing our Slingers to life.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="posse" class="section posse-section">
+        <div class="container">
+            <h2 class="section-title">Join the Posse</h2>
+            <p class="section-intro">Get exclusive card reveals, Slinger Spotlights, and be the first to know when
+                Slingers launches</p>
+
+            <form class="newsletter-form" action="https://buttondown.email/api/emails/embed-subscribe/YOUR_USERNAME" method="post" target="popupwindow">
+                <div class="form-group">
+                    <input type="text" name="metadata__name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <input type="hidden" name="embed" value="1" />
+                <div class="benefits">
+                    <div class="benefit">
+                        <span class="benefit-icon">🎴</span>
+                        <span>Exclusive card reveals</span>
+                    </div>
+                    <div class="benefit">
+                        <span class="benefit-icon">🤠</span>
+                        <span>Slinger spotlights</span>
+                    </div>
+                    <div class="benefit">
+                        <span class="benefit-icon">⭐</span>
+                        <span>Early access news</span>
+                    </div>
+                </div>
+                <button type="submit" class="submit-button">Join the Posse</button>
+            </form>
+            <p id="form-message" style="display: none; margin-top: 1rem; color: var(--accent-gold); text-align: center; font-weight: bold;"></p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Slingers. All rights reserved. | Slingin' Cards, Buildin' Hands, and Takin' Names.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
