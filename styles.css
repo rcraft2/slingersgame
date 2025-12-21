@@ -608,6 +608,7 @@ html {
     flex-direction: column;
     gap: 1.5rem;
     padding: 2rem;
+    flex-wrap: wrap; /* Added to prevent overflow */
 }
 
 .stat {
