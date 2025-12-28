@@ -356,15 +356,43 @@ html {
     border-radius: 10px;
     overflow: visible;
     border: 2px solid var(--accent-gold);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
     perspective: 1000px;
     cursor: pointer;
     height: 100%;
     min-height: 600px;
+    position: relative;
+}
+
+.slinger-card::before {
+    content: '↻ Tap to flip';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--accent-gold);
+    color: var(--text-dark);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    z-index: 10;
+    pointer-events: none;
+    animation: gentlePulse 2s ease-in-out infinite;
+}
+
+@keyframes gentlePulse {
+    0%, 100% { opacity: 0.8; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+
+.slinger-card.flipped::before {
+    content: '↻ Tap to flip back';
+    opacity: 0.6;
 }
 
 .slinger-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(244, 197, 66, 0.3);
 }
 
 .slinger-card-inner {
