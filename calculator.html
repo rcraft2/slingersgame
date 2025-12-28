@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slingers Calculator - Combat Damage Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Slingers Logo" class="logo-image">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#legend" class="nav-link">The Legend</a></li>
+                <li><a href="index.html#showdown" class="nav-link">The Showdown</a></li>
+                <li><a href="index.html#slingers" class="nav-link">The Slingers</a></li>
+                <li><a href="index.html#trail" class="nav-link">The Trail</a></li>
+                <li><a href="calculator.html" class="nav-link active">Calculator</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="calculator-hero">
+        <div class="container">
+            <h1 class="calculator-title">Slingers Combat Calculator</h1>
+            <p class="calculator-subtitle">Calculate damage dealt in showdowns</p>
+        </div>
+    </section>
+
+    <section class="calculator-section">
+        <div class="container">
+            <div class="calculator-grid">
+                <!-- Player 1 -->
+                <div class="player-column">
+                    <h2 class="player-title">Player 1 (Attacker)</h2>
+                    
+                    <div class="input-group">
+                        <label for="p1-position">Position (e.g., B12, G4)</label>
+                        <input type="text" id="p1-position" placeholder="B12" class="position-input">
+                    </div>
+
+                    <div class="modifiers-section">
+                        <h3>Modifiers</h3>
+                        <div class="modifier-row">
+                            <label for="p1-damage-mod">Damage Modifier</label>
+                            <input type="number" id="p1-damage-mod" value="0" class="modifier-input">
+                        </div>
+                        <div class="modifier-row">
+                            <label for="p1-attack-mod">Attack Roll Modifier</label>
+                            <input type="number" id="p1-attack-mod" value="0" class="modifier-input">
+                        </div>
+                    </div>
+
+                    <div class="weapons-section">
+                        <div class="weapons-header">
+                            <h3>Weapons</h3>
+                            <button type="button" class="add-weapon-btn" data-player="1">+ Add Weapon</button>
+                        </div>
+                        <div id="p1-weapons" class="weapons-list">
+                            <div class="weapon-card">
+                                <div class="weapon-header">
+                                    <span>Weapon 1</span>
+                                    <button type="button" class="remove-weapon-btn" style="display: none;">✕</button>
+                                </div>
+                                <div class="weapon-inputs">
+                                    <div class="weapon-input-group">
+                                        <label>Max Damage</label>
+                                        <input type="number" class="weapon-max-damage" placeholder="5" value="5">
+                                    </div>
+                                    <div class="weapon-input-group">
+                                        <label>Falloff</label>
+                                        <input type="number" class="weapon-falloff" placeholder="1" value="1" step="0.5">
+                                    </div>
+                                    <div class="weapon-input-group">
+                                        <label>Dice Roll</label>
+                                        <input type="number" class="weapon-dice" placeholder="6" value="6" min="1" max="6">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result-section">
+                        <h3>Total Damage Dealt</h3>
+                        <div class="damage-result" id="p1-result">0</div>
+                    </div>
+                </div>
+
+                <!-- Player 2 -->
+                <div class="player-column">
+                    <h2 class="player-title">Player 2 (Target)</h2>
+                    
+                    <div class="input-group">
+                        <label for="p2-position">Position (e.g., B12, G4)</label>
+                        <input type="text" id="p2-position" placeholder="G4" class="position-input">
+                    </div>
+
+                    <div class="modifiers-section">
+                        <h3>Modifiers</h3>
+                        <div class="modifier-row">
+                            <label for="p2-damage-mod">Damage Modifier</label>
+                            <input type="number" id="p2-damage-mod" value="0" class="modifier-input">
+                        </div>
+                        <div class="modifier-row">
+                            <label for="p2-attack-mod">Attack Roll Modifier</label>
+                            <input type="number" id="p2-attack-mod" value="0" class="modifier-input">
+                        </div>
+                    </div>
+
+                    <div class="weapons-section">
+                        <div class="weapons-header">
+                            <h3>Weapons</h3>
+                            <button type="button" class="add-weapon-btn" data-player="2">+ Add Weapon</button>
+                        </div>
+                        <div id="p2-weapons" class="weapons-list">
+                            <div class="weapon-card">
+                                <div class="weapon-header">
+                                    <span>Weapon 1</span>
+                                    <button type="button" class="remove-weapon-btn" style="display: none;">✕</button>
+                                </div>
+                                <div class="weapon-inputs">
+                                    <div class="weapon-input-group">
+                                        <label>Max Damage</label>
+                                        <input type="number" class="weapon-max-damage" placeholder="5" value="5">
+                                    </div>
+                                    <div class="weapon-input-group">
+                                        <label>Falloff</label>
+                                        <input type="number" class="weapon-falloff" placeholder="1" value="1" step="0.5">
+                                    </div>
+                                    <div class="weapon-input-group">
+                                        <label>Dice Roll</label>
+                                        <input type="number" class="weapon-dice" placeholder="4" value="4" min="1" max="6">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result-section">
+                        <h3>Total Damage Dealt</h3>
+                        <div class="damage-result" id="p2-result">0</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="distance-display">
+                <div class="distance-label">Distance Between Players</div>
+                <div class="distance-value" id="distance-value">-</div>
+                <div class="distance-unit">squares</div>
+            </div>
+
+            <div class="calculate-section">
+                <button type="button" id="calculate-btn" class="calculate-btn">Calculate Damage</button>
+                <button type="button" id="reset-btn" class="reset-btn">Reset</button>
+            </div>
+
+            <div class="breakdown-section" id="breakdown-section" style="display: none;">
+                <h2>Damage Breakdown</h2>
+                <div class="breakdown-grid">
+                    <div class="breakdown-column">
+                        <h3>Player 1</h3>
+                        <div id="p1-breakdown"></div>
+                    </div>
+                    <div class="breakdown-column">
+                        <h3>Player 2</h3>
+                        <div id="p2-breakdown"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Slingers. All rights reserved. | Slingin' Cards, Buildin' Hands, and Takin' Names.</p>
+    </footer>
+
+    <script src="calculator.js"></script>
+</body>
+
+</html>
