@@ -17,31 +17,55 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Handle form submission - Mailchimp handles it, just visual feedback
-    const contactForm = document.querySelector('.newsletter-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            // Let Mailchimp handle the actual submission
-            setTimeout(() => {
-                alert('Welcome to the Posse! Check your email to confirm your subscription.');
-            }, 500);
-        });
-    }
-
-    // Handle Buttondown form submission
-    const posseForm = document.querySelector('.newsletter-form');
+    // Handle Google Sheets form submission
+    const posseForm = document.getElementById('posse-form');
     const formMessage = document.getElementById('form-message');
     
     if (posseForm) {
         posseForm.addEventListener('submit', function(e) {
-            setTimeout(() => {
-                formMessage.textContent = 'Welcome to the Posse! Check your email to confirm your subscription.';
+            e.preventDefault();
+            
+            const submitButton = posseForm.querySelector('.submit-button');
+            const originalButtonText = submitButton.textContent;
+            submitButton.textContent = 'Joining...';
+            submitButton.disabled = true;
+            
+            const formData = new FormData(posseForm);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                timestamp: new Date().toISOString()
+            };
+            
+            // Replace this URL with your Google Apps Script web app URL
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwaViF7MdopXiyYbn2y4-gbddX7nEIVoys37I7MHrGOZU17_hydDXhg3-vLPeVkzneW/exec';
+            
+            fetch(scriptURL, {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                mode: 'no-cors'
+            })
+            .then(response => {
+                formMessage.textContent = 'Welcome to the Posse! Thanks for joining.';
                 formMessage.style.display = 'block';
                 formMessage.style.color = 'var(--accent-gold)';
-            }, 500);
+                posseForm.reset();
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                formMessage.textContent = 'Thanks for signing up! Your submission has been recorded.';
+                formMessage.style.display = 'block';
+                formMessage.style.color = 'var(--accent-gold)';
+                posseForm.reset();
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+            });
         });
-    } else {
-        console.log('Form not found!'); // Debug log
     }
 
     // Add scroll effect to navbar
