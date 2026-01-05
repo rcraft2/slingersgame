@@ -31,6 +31,41 @@ function doPost(e) {
       data.email
     ]);
     
+    // Send welcome email to subscriber
+    MailApp.sendEmail({
+      to: data.email,
+      subject: 'Welcome to the Slingers Posse!',
+      name: 'Slingers Game', // Custom sender name (shows as "Slingers Game" instead of your Gmail name)
+      replyTo: 'your-email@example.com', // Optional: where replies should go
+      htmlBody: `
+        <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto;">
+          <h1 style="color: #f4c542;">Howdy, ${data.name}!</h1>
+          <p style="font-size: 16px; line-height: 1.6;">
+            Thanks for joining the Slingers Posse! You're now part of an exclusive group that will get:
+          </p>
+          <ul style="font-size: 16px; line-height: 1.8;">
+            <li>🎴 Exclusive card reveals</li>
+            <li>🤠 Slinger spotlights</li>
+            <li>⭐ Early access news</li>
+          </ul>
+          <p style="font-size: 16px; line-height: 1.6;">
+            Keep an eye on your inbox for updates about Slingers!
+          </p>
+          <p style="font-size: 16px; color: #8b4513;">
+            — The Slingers Team<br>
+            <em>Slingin' Cards, Buildin' Hands, and Takin' Names</em>
+          </p>
+        </div>
+      `
+    });
+    
+    // Optional: Send notification to yourself
+    MailApp.sendEmail({
+      to: 'your-email@example.com', // Replace with your email
+      subject: 'New Slingers Posse Signup!',
+      body: 'Name: ' + data.name + '\nEmail: ' + data.email + '\nTimestamp: ' + data.timestamp
+    });
+    
     return ContentService.createTextOutput(JSON.stringify({
       'result': 'success',
       'data': data
@@ -56,12 +91,18 @@ function doPost(e) {
    - **Execute as**: Me (your email)
    - **Who has access**: Anyone
 4. Click **Deploy**
-5. You may need to authorize the script:
+5. **You WILL be prompted to authorize the script:**
    - Click **Authorize access**
    - Choose your Google account
-   - Click **Advanced** → **Go to [project name] (unsafe)**
+   - You'll see a warning: "Google hasn't verified this app"
+   - Click **Advanced** → **Go to [project name] (unsafe)** (this is safe - it's your own script!)
+   - **Review the permissions requested:**
+     - "Send email as you" - Required for welcome emails
+     - "See, edit, create, and delete your spreadsheets" - Required to save form data
    - Click **Allow**
 6. **Copy the Web app URL** (it looks like: `https://script.google.com/macros/s/...../exec`)
+
+**Important:** The authorization step is crucial! Without it, emails won't send. The warning appears because it's a custom script, but it's completely safe since you wrote it.
 
 ## Step 4: Update Your Website
 
@@ -96,16 +137,27 @@ To download your data as CSV:
 
 - **Form submits but no data appears**: Check that the Apps Script is deployed with "Who has access" set to "Anyone"
 - **Need to update the script**: After making changes, click **Deploy** → **Manage deployments** → Edit (pencil icon) → **Version: New version** → **Deploy**
-- **Want email notifications**: Add this to your Apps Script after `sheet.appendRow([...]);`:
+- **Emails not sending**: Make sure you've authorized the script to send emails on your behalf when you first run it
+- **Want to customize the welcome email**: Edit the `htmlBody` section in the script above to match your brand
 
-```javascript
-// Send email notification
-MailApp.sendEmail({
-  to: 'your-email@example.com',
-  subject: 'New Posse Signup!',
-  body: 'Name: ' + data.name + '\nEmail: ' + data.email
-});
-```
+## Setting Up Automated Emails
+
+The script above automatically sends:
+1. **Welcome email to new subscribers** - Personalized with their name
+2. **Notification to you** - So you know when someone signs up (optional)
+
+**To customize:**
+- **Sender Name**: Change `name: 'Slingers Game'` to whatever you want to appear as the sender
+- **Reply-To Address**: Set `replyTo: 'your-email@example.com'` so replies go to your preferred email
+- **Email Address**: The email will come from your Google account, but the display name can be customized
+- **Email Content**: Modify the `htmlBody` section to match your brand
+- Remove the notification email block if you don't want personal alerts
+
+**Email limits:**
+- Free Gmail accounts: ~100 emails per day
+- Google Workspace accounts: ~1,500 emails per day
+
+**Note:** The actual email address will be from your Google account (e.g., yourname@gmail.com), but recipients will see the custom name you set. If you need a fully custom email address (like info@slingers.com), you'll need to use a third-party email service like SendGrid, Mailgun, or set up SMTP forwarding through Google Workspace.
 
 ## Privacy Note
 
