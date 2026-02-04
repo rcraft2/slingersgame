@@ -102,12 +102,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Countdown Timer for Kickstarter Launch
     function updateCountdown() {
-        const launchDate = new Date('October 17, 2026 00:00:00').getTime();
+        // Use ISO format for better cross-browser compatibility
+        const launchDate = new Date('2026-10-17T00:00:00').getTime();
         const now = new Date().getTime();
         const distance = launchDate - now;
 
+        const countdownBanner = document.querySelector('.countdown-banner');
+        if (!countdownBanner) return;
+
         if (distance < 0) {
-            document.querySelector('.countdown-banner').innerHTML = 
+            countdownBanner.innerHTML = 
                 '<div class="countdown-content"><h3 class="countdown-title">🎉 Kickstarter is Now Live! 🎉</h3></div>';
             return;
         }
@@ -117,10 +121,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById('days').textContent = String(days).padStart(2, '0');
-        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        const daysEl = document.getElementById('days');
+        const hoursEl = document.getElementById('hours');
+        const minutesEl = document.getElementById('minutes');
+        const secondsEl = document.getElementById('seconds');
+
+        if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+        if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+        if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
+        if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
     }
 
     // Update countdown immediately and then every second
