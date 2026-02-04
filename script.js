@@ -99,4 +99,31 @@ document.addEventListener('DOMContentLoaded', function() {
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
+
+    // Countdown Timer for Kickstarter Launch
+    function updateCountdown() {
+        const launchDate = new Date('October 17, 2026 00:00:00').getTime();
+        const now = new Date().getTime();
+        const distance = launchDate - now;
+
+        if (distance < 0) {
+            document.querySelector('.countdown-banner').innerHTML = 
+                '<div class="countdown-content"><h3 class="countdown-title">🎉 Kickstarter is Now Live! 🎉</h3></div>';
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('days').textContent = String(days).padStart(2, '0');
+        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    }
+
+    // Update countdown immediately and then every second
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
 });
