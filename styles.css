@@ -607,6 +607,19 @@ html {
     -webkit-backface-visibility: hidden;
     border-radius: 10px;
     overflow: hidden;
+    transition: opacity 0s linear 0.3s;
+}
+
+.slinger-card-back {
+    opacity: 0;
+}
+
+.slinger-card.flipped .slinger-card-front {
+    opacity: 0;
+}
+
+.slinger-card.flipped .slinger-card-back {
+    opacity: 1;
 }
 
 .slinger-card-front {
