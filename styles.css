@@ -1513,12 +1513,36 @@ html {
     .turn-arrow {
         display: none;
     }
-    
+
     .turn-flow {
         flex-direction: column;
     }
-    
+
     .turn-step {
         max-width: 100%;
+    }
+
+    .slinger-card-inner {
+        transform: none !important;
+        -webkit-transform: none !important;
+        transform-style: flat;
+        -webkit-transform-style: flat;
+    }
+
+    .slinger-card.flipped .slinger-card-inner {
+        transform: none !important;
+        -webkit-transform: none !important;
+    }
+
+    .slinger-card-front,
+    .slinger-card-back {
+        backface-visibility: visible;
+        -webkit-backface-visibility: visible;
+        transition: opacity 0.35s ease;
+    }
+
+    .slinger-card-back {
+        transform: none;
+        -webkit-transform: none;
     }
 }
