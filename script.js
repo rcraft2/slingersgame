@@ -69,35 +69,78 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Add scroll effect to navbar
+    const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
         if (window.scrollY > 100) {
-            navbar.style.background = 'rgba(45, 53, 97, 1)';
+            navbar.classList.add('navbar-scrolled');
         } else {
-            navbar.style.background = 'rgba(45, 53, 97, 0.95)';
+            navbar.classList.remove('navbar-scrolled');
         }
     });
 
-    // Intersection Observer for fade-in animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
-    };
+    // Intersection Observer for scroll-reveal animations
+    const revealSelectors = [
+        '.card-type',
+        '.setup-step',
+        '.turn-step',
+        '.combat-step',
+        '.death-step',
+        '.location-card',
+        '.slinger-card',
+        '.attribute-card',
+        '.blog-post',
+        '.formula-step',
+        '.movement-rule',
+        '.win-condition',
+        '.tie-condition',
+        '.round-step',
+        '.component',
+        '.legend-objective',
+        '.damage-calculation',
+        '.turn-notes'
+    ];
 
-    const observer = new IntersectionObserver(function(entries) {
+    const revealElements = document.querySelectorAll(revealSelectors.join(','));
+    revealElements.forEach((el, idx) => {
+        el.classList.add('reveal');
+        // Stagger items within the same grid for a cascade effect
+        el.style.transitionDelay = `${Math.min(idx % 6, 5) * 60}ms`;
+    });
+
+    const revealObserver = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('is-visible');
+                revealObserver.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -60px 0px'
+    });
 
-    document.querySelectorAll('.rule-card, .gallery-item').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Equalize slinger card heights to the tallest one
+    function equalizeSlingerCards() {
+        const cards = document.querySelectorAll('.slinger-card');
+        if (cards.length === 0) return;
+        cards.forEach(c => { c.style.height = 'auto'; });
+        // Force layout, then measure
+        const maxHeight = Math.max(...Array.from(cards).map(c => c.offsetHeight));
+        cards.forEach(c => { c.style.height = `${maxHeight}px`; });
+    }
+
+    if (document.readyState === 'complete') {
+        equalizeSlingerCards();
+    } else {
+        window.addEventListener('load', equalizeSlingerCards);
+    }
+
+    let equalizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(equalizeTimeout);
+        equalizeTimeout = setTimeout(equalizeSlingerCards, 150);
     });
 
     // Countdown Timer for Kickstarter Launch
@@ -111,8 +154,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!countdownBanner) return;
 
         if (distance < 0) {
-            countdownBanner.innerHTML = 
-                '<div class="countdown-content"><h3 class="countdown-title">🎉 Kickstarter is Now Live! 🎉</h3></div>';
+            countdownBanner.innerHTML =
+                '<div class="countdown-content"><h3 class="countdown-title">Kickstarter is Now Live</h3></div>';
             return;
         }
 

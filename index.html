@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slingers - Slingin' Cards, Buildin' Hands, and Takin' Names</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Rye&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -61,7 +64,10 @@
             <p class="hero-tagline">Slingin' Cards, Buildin' Hands, and Takin' Names</p>
             <p class="hero-subtitle">A tactical board game of frontier duels where positioning, cards, and cunning
                 determine who becomes a legend</p>
-            <a href="#showdown" class="cta-button">Learn to Play</a>
+            <div class="hero-buttons">
+                <a href="#showdown" class="cta-button cta-primary">Learn to Play</a>
+                <a href="#posse" class="cta-button cta-secondary">Join the Posse</a>
+            </div>
         </div>
         <div class="hero-overlay"></div>
     </section>
@@ -95,10 +101,10 @@
                 <div class="legend-image">
                     <div class="placeholder-card">
                         <div class="game-stats">
-                            <div class="stat">🎲 Dice-Driven Combat</div>
-                            <div class="stat">🗺️ Grid-Based Movement</div>
-                            <div class="stat">🎴 90 Unique Cards</div>
-                            <div class="stat">🤠 10 Characters</div>
+                            <div class="stat">Dice-Driven Combat</div>
+                            <div class="stat">Grid-Based Movement</div>
+                            <div class="stat">90 Unique Cards</div>
+                            <div class="stat">10 Characters</div>
                         </div>
                     </div>
                 </div>
@@ -115,33 +121,33 @@
                 <h3 class="steps-title">Game Setup</h3>
                 <div class="setup-grid">
                     <div class="setup-step">
-                        <div class="setup-icon">🤠</div>
+                        <div class="setup-step-number">1</div>
                         <h4>Choose Your Slinger</h4>
                         <p>Each player selects a character and takes their player piece and character info card</p>
                     </div>
                     <div class="setup-step">
-                        <div class="setup-icon">🗺️</div>
+                        <div class="setup-step-number">2</div>
                         <h4>Prepare the Board</h4>
                         <p>Place 4 location cards on the map, aligning their grids with the game board</p>
                     </div>
                     <div class="setup-step">
-                        <div class="setup-icon">🎲</div>
+                        <div class="setup-step-number">3</div>
                         <h4>Determine Turn Order</h4>
                         <p>Roll a six-sided die to decide who goes first</p>
                     </div>
                     <div class="setup-step">
-                        <div class="setup-icon">🎴</div>
+                        <div class="setup-step-number">4</div>
                         <h4>Deal Starting Hands</h4>
                         <p>Each player draws 5 cards. Start with 99 health (or choose lower for a faster game)</p>
                     </div>
                     <div class="setup-step">
-                        <div class="setup-icon">📍</div>
+                        <div class="setup-step-number">5</div>
                         <h4>Place Characters</h4>
                         <p>First player places their piece anywhere on the map, then clockwise each player does the same
                         </p>
                     </div>
                     <div class="setup-step">
-                        <div class="setup-icon">⚔️</div>
+                        <div class="setup-step-number">6</div>
                         <h4>Begin the Duel!</h4>
                         <p>You're ready to face off in the ultimate Slinger showdown</p>
                     </div>
@@ -389,24 +395,24 @@
 
                 <div class="movement-rules">
                     <div class="movement-rule">
-                        <h4>📍 Roll for Movement</h4>
+                        <h4>Roll for Movement</h4>
                         <p>During your turn, use the 4-sided die to get your movement roll.</p>
                     </div>
 
                     <div class="movement-rule">
-                        <h4>⚡ Apply Modifiers</h4>
+                        <h4>Apply Modifiers</h4>
                         <p>Apply any buffs to your movement (steeds, equipment, etc.) to get your final maximum
                             movement.</p>
                     </div>
 
                     <div class="movement-rule">
-                        <h4>🧭 Free Direction</h4>
+                        <h4>Free Direction</h4>
                         <p>You can move in any direction you would like and even change directions throughout your
                             movement. Move horizontally, vertically, and diagonally.</p>
                     </div>
 
                     <div class="movement-rule">
-                        <h4>🚫 Movement Restrictions</h4>
+                        <h4>Movement Restrictions</h4>
                         <p>You cannot move through a square occupied by another player and you cannot land in a square
                             occupied by another player.</p>
                     </div>
@@ -423,7 +429,7 @@
                     </div>
 
                     <div class="tie-condition">
-                        <h4>⚖️ Tie Game</h4>
+                        <h4>Tie Game</h4>
                         <p>A game can end in a tie if the last 2 players' health hit 0 during the final attack (attack
                             target's damage is still applied to the attacker even if the target's health hits 0).</p>
                     </div>
@@ -559,7 +565,7 @@
             <p class="section-intro">Ten unique gunslingers, each with their own story, style, and reason to fight</p>
             <p class="section-hint"
                 style="text-align: center; color: var(--accent-gold); font-size: 1.1rem; margin-bottom: 2rem; font-weight: bold;">
-                👆 Tap any character card to reveal their special abilities
+                Tap any character card to reveal their special abilities
             </p>
 
             <div class="slingers-grid">
@@ -933,15 +939,12 @@
                 </div>
                 <div class="benefits">
                     <div class="benefit">
-                        <span class="benefit-icon">🎴</span>
                         <span>Exclusive card reveals</span>
                     </div>
                     <div class="benefit">
-                        <span class="benefit-icon">🤠</span>
                         <span>Slinger spotlights</span>
                     </div>
                     <div class="benefit">
-                        <span class="benefit-icon">⭐</span>
                         <span>Early access news</span>
                     </div>
                 </div>
