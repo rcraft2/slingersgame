@@ -586,21 +586,23 @@ html {
     position: relative;
     width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
     transition: transform 0.6s;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
 }
 
 .slinger-card.flipped .slinger-card-inner {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 
 .slinger-card-front,
 .slinger-card-back {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     border-radius: 10px;
@@ -638,6 +640,7 @@ html {
         radial-gradient(ellipse at center, rgba(212, 162, 59, 0.18) 0%, transparent 65%),
         linear-gradient(135deg, #3d2817 0%, var(--primary-color) 100%);
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
     display: flex;
     align-items: center;
     justify-content: center;
