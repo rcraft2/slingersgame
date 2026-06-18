@@ -983,6 +983,11 @@ html {
     z-index: 2;
 }
 
+.character-image.boone-sage-large {
+    transform: translateY(18px) scale(1.25);
+    transform-origin: center bottom;
+}
+
 .hero-logo {
     max-width: 500px;
     width: 80%;

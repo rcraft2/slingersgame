@@ -513,6 +513,19 @@
                         </ul>
                     </div>
 
+                    <div class="location-card stable-card">
+                        <div class="location-icon">
+                            <img src="assets/buildings/stable.png" alt="Stable" class="location-image">
+                        </div>
+                        <h4>Stable</h4>
+                        <ul class="location-rules">
+                            <li>Players can freely enter and leave the stable</li>
+                            <li>While in the stable during your turn, you may discard a card to draw a steed card from
+                                the steed deck</li>
+                            <li>All combat is allowed in the stable</li>
+                        </ul>
+                    </div>
+
                     <div class="location-card emporium-card">
                         <div class="location-icon">
                             <img src="assets/buildings/jacks.png" alt="Jack's Firearm Emporium" class="location-image">
@@ -589,7 +602,7 @@
                                 <h4 class="ability-title">Special Ability</h4>
                                 <p class="ability-text">When involved in combat, roll a 6-sided die:<br><br>
                                     1-4: Nothing happens<br>
-                                    5+: Dodge the attack avoiding all incoming damage</p>
+                                    5+: Dodge the attack avoiding all incoming damage and draw a card</p>
                             </div>
                         </div>
                     </div>
@@ -615,8 +628,12 @@
                                 <h3 class="slinger-name">Daliore</h3>
                                 <h4 class="ability-title">Special Ability</h4>
                                 <p class="ability-text">No limit on equipment cards.<br><br>
-                                    When under half health:<br>
-                                    +1 to attack roll</p>
+                                    Once per turn you may discard a card a roll a 6-sided dice:<br>
+				    1-2: nothing<br>
+				    3-4: draw 1 card<br>
+				    5: draw 2 cards<br>
+	   			    6: draw 3 cards
+				</p>
                             </div>
                         </div>
                     </div>
@@ -695,8 +712,8 @@
                             <div class="ability-content">
                                 <h3 class="slinger-name">Noises</h3>
                                 <h4 class="ability-title">Special Ability</h4>
-                                <p class="ability-text">-1 to opponents attack roll<br><br>
-                                    When attacking, if roll is 6+, there is no falloff.</p>
+                                <p class="ability-text">You may re-roll 1 dice per turn<br><br>
+                                    When attacking, if roll is 6+, close tier damage is used.</p>
                             </div>
                         </div>
                     </div>
@@ -775,9 +792,8 @@
                             <div class="ability-content">
                                 <h3 class="slinger-name">Ghala</h3>
                                 <h4 class="ability-title">Special Ability</h4>
-                                <p class="ability-text">When only wielding a single weapon:<br>
-                                    -0.5 to falloff<br>
-                                    +1 to damage per shot</p>
+                                <p class="ability-text">+1 squares to each range tier<br>
+                                    +1 to attack roll when wielding a single weapon.</p>
                             </div>
                         </div>
                     </div>
@@ -838,9 +854,7 @@
                     <div class="slinger-card-inner">
                         <div class="slinger-card-front">
                             <div class="slinger-portrait">
-                                <div
-                                    style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3); color: var(--accent-gold); font-size: 2rem; font-weight: bold;">
-                                    ?</div>
+                                <img src="assets/characters/boone.png" alt="Boone" class="character-image boone-sage-large">
                             </div>
                             <div class="slinger-info">
                                 <h3 class="slinger-name">Boone</h3>
@@ -856,7 +870,7 @@
                                 <p class="ability-text">+1 <img src="assets/icons/steed.png" alt="Speed"
                                         class="inline-icon"> to steeds<br><br>
                                     +1 to attack roll when on a steed<br><br>
-                                    Discard 3 cards to send any player to jail (as if you played a Sheriff card)</p>
+                                    Choose from the top 3 cards when drawing from the steed deck</p>
                             </div>
                         </div>
                     </div>
@@ -866,9 +880,7 @@
                     <div class="slinger-card-inner">
                         <div class="slinger-card-front">
                             <div class="slinger-portrait">
-                                <div
-                                    style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3); color: var(--accent-gold); font-size: 2rem; font-weight: bold;">
-                                    ?</div>
+                                <img src="assets/characters/sage.png" alt="Sage" class="character-image boone-sage-large">
                             </div>
                             <div class="slinger-info">
                                 <h3 class="slinger-name">Sage</h3>
@@ -883,7 +895,7 @@
                                 <h4 class="ability-title">Special Ability</h4>
                                 <p class="ability-text">Cannot be sent to jail<br><br>
                                     Rope cards do not affect her<br><br>
-                                    When she uses rope cards, they cannot be cut</p>
+                                    Pet abilities may be used twice per turn</p>
                             </div>
                         </div>
                     </div>
