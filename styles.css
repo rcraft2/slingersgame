@@ -83,6 +83,16 @@ html {
     letter-spacing: 2px;
 }
 
+.countdown-link {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.countdown-link:hover {
+    color: var(--secondary-color);
+}
+
 .countdown-timer {
     display: flex;
     justify-content: center;

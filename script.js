@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Countdown Timer for Kickstarter Launch
     function updateCountdown() {
         // Use ISO format for better cross-browser compatibility
-        const launchDate = new Date('2026-10-17T00:00:00').getTime();
+        const launchDate = new Date('2026-12-12T00:00:00').getTime();
         const now = new Date().getTime();
         const distance = launchDate - now;
 
@@ -155,7 +155,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (distance < 0) {
             countdownBanner.innerHTML =
-                '<div class="countdown-content"><h3 class="countdown-title">Kickstarter is Now Live</h3></div>';
+                '<div class="countdown-content"><h3 class="countdown-title">' +
+                '<a href="https://www.kickstarter.com/projects/1177807802/slingers-0" target="_blank" rel="noopener" class="countdown-link">Kickstarter is Now Live &mdash; Back Slingers</a>' +
+                '</h3></div>';
             return;
         }
 
