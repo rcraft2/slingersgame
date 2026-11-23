@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Rye&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=5">
+    <link rel="stylesheet" href="styles.css?v=10">
 </head>
 
 <body>
@@ -35,7 +35,7 @@
 
     <div class="countdown-banner">
         <div class="countdown-content">
-            <h3 class="countdown-title">Kickstarter Launches December 12 &mdash; <a
+            <h3 class="countdown-title">Kickstarter Launches December 8 &mdash; <a
                     href="https://www.kickstarter.com/projects/1177807802/slingers-0" target="_blank" rel="noopener"
                     class="countdown-link">Get Notified</a></h3>
             <div class="countdown-timer">
@@ -60,19 +60,14 @@
     </div>
 
     <section id="home" class="hero">
-        <div class="hero-content">
-            <img src="assets/logo.png" alt="Slingers" class="hero-logo">
-            <p class="hero-tagline">Slingin' Cards, Buildin' Hands, and Takin' Names</p>
-            <p class="hero-subtitle">A tactical board game of frontier duels where positioning, cards, and cunning
-                determine who becomes a legend</p>
-            <div class="hero-buttons">
-                <a href="https://www.kickstarter.com/projects/1177807802/slingers-0" target="_blank" rel="noopener"
-                    class="cta-button cta-primary">Follow on Kickstarter</a>
-                <a href="#showdown" class="cta-button cta-secondary">Learn to Play</a>
-                <a href="#posse" class="cta-button cta-secondary">Join the Posse</a>
-            </div>
+        <img src="assets/banner.png" alt="Slingers &mdash; Slingin' Cards, Buildin' Hands, and Takin' Names"
+            class="hero-banner">
+        <div class="hero-buttons">
+            <a href="https://www.kickstarter.com/projects/1177807802/slingers-0" target="_blank" rel="noopener"
+                class="cta-button cta-primary">Follow on Kickstarter</a>
+            <a href="#showdown" class="cta-button cta-secondary">Learn to Play</a>
+            <a href="#posse" class="cta-button cta-secondary">Join the Posse</a>
         </div>
-        <div class="hero-overlay"></div>
     </section>
 
     <section id="legend" class="section legend-section">
@@ -80,34 +75,37 @@
             <h2 class="section-title">The Legend</h2>
             <div class="legend-content">
                 <div class="legend-text">
-                    <p class="intro-text">The frontier is unforgiving. Only the smartest, fastest, and most cunning
-                        Slingers survive the deadly duels that forge legends.</p>
+                    <p class="intro-text">Slingers is a fast-action shooter game for 3&ndash;8 players. The frontier is
+                        unforgiving&mdash;only the smartest, fastest, and most cunning Slingers survive the deadly duels
+                        that forge legends.</p>
 
-                    <p>Navigate the board strategically, equip powerful weapons and equipment, mount trusty steeds, and
-                        use
-                        action cards wisely to outmaneuver your opponents in tactical showdowns.</p>
+                    <p>Choose from 12 unique Slingers, each with abilities that shape your strategy. Navigate the
+                        grid-based map, manage your weapon and equipment loadouts, mount trusty steeds, and use action
+                        and combat cards to outgun your opponents.</p>
 
                     <p>Every location offers new opportunities. Every card drawn could change your fate. Every die roll
-                        could
-                        be your last.</p>
+                        could be your last.</p>
 
                     <div class="legend-objective">
                         <strong>Game Overview:</strong>
                         <ul>
                             <li>Move across the grid-based game board</li>
-                            <li>Each player starts with 99 health (customizable for faster games)</li>
-                            <li>Use cards strategically to attack, defend, and survive</li>
-                            <li>Last Slinger standing wins the duel!</li>
+                            <li>Each player starts with 99 health (choose lower for a faster game)</li>
+                            <li>Start with 5 cards and draw an additional card each turn</li>
+                            <li>Every turn ends with a combat phase where two players "duel"</li>
+                            <li>Weapon damage depends on how far you are from your target</li>
+                            <li>Reach 0 health and you are eliminated&mdash;be the last Slinger standing!</li>
                         </ul>
                     </div>
                 </div>
                 <div class="legend-image">
                     <div class="placeholder-card">
                         <div class="game-stats">
+                            <div class="stat">3&ndash;8 Players</div>
                             <div class="stat">Dice-Driven Combat</div>
                             <div class="stat">Grid-Based Movement</div>
-                            <div class="stat">90 Unique Cards</div>
-                            <div class="stat">10 Characters</div>
+                            <div class="stat">156 Cards</div>
+                            <div class="stat">12 Characters</div>
                         </div>
                     </div>
                 </div>
@@ -126,12 +124,13 @@
                     <div class="setup-step">
                         <div class="setup-step-number">1</div>
                         <h4>Choose Your Slinger</h4>
-                        <p>Each player selects a character and takes their player piece and character info card</p>
+                        <p>Each player chooses a character and takes their player piece and character life tracker</p>
                     </div>
                     <div class="setup-step">
                         <div class="setup-step-number">2</div>
                         <h4>Prepare the Board</h4>
-                        <p>Place 4 location cards on the map, aligning their grids with the game board</p>
+                        <p>Place the 5 location boards anywhere on the map so their grids line up with the grid of the
+                            game board</p>
                     </div>
                     <div class="setup-step">
                         <div class="setup-step-number">3</div>
@@ -141,13 +140,14 @@
                     <div class="setup-step">
                         <div class="setup-step-number">4</div>
                         <h4>Deal Starting Hands</h4>
-                        <p>Each player draws 5 cards. Start with 99 health (or choose lower for a faster game)</p>
+                        <p>Deal each player 5 cards. Everyone starts with 99 health (choose lower for a faster game).
+                            Illness cards dealt to a starting hand are discarded and replaced</p>
                     </div>
                     <div class="setup-step">
                         <div class="setup-step-number">5</div>
                         <h4>Place Characters</h4>
-                        <p>First player places their piece anywhere on the map, then clockwise each player does the same
-                        </p>
+                        <p>First player places their piece anywhere on the map, then clockwise each player does the same.
+                            You cannot start inside a building or within 3 squares of another player</p>
                     </div>
                     <div class="setup-step">
                         <div class="setup-step-number">6</div>
@@ -170,11 +170,12 @@
 
                 <div class="card-type">
                     <div class="card-icon">
-                        <img src="assets/icons/weapon.png" alt="Weapon" class="icon-image">
+                        <img src="assets/icons/single.png" alt="Weapon" class="icon-image">
                     </div>
                     <h3>Weapons</h3>
-                    <p>Equip during setup or your turn. Swap weapons anytime before attack phase. Features attributes
-                        like Max Damage, Falloff, Melee, Dual Wield, and Cut Rope.</p>
+                    <p>Equip during setup or your turn. Bring weapons back into your hand or swap them out at any point
+                        before you declare attack phase. Every weapon is melee, single wield, or dual wield and lists
+                        its damage at close, medium, and long range.</p>
                 </div>
 
                 <div class="card-type">
@@ -182,17 +183,17 @@
                         <img src="assets/icons/equipment.png" alt="Equipment" class="icon-image">
                     </div>
                     <h3>Equipment</h3>
-                    <p>Equip during setup or before attack phase. Can only have 2 equipped at a time. Can only unequip
-                        if you have not used it's ability this turn.</p>
+                    <p>Equip or unequip during setup or your turn, any time before attack phase. You may only have 2
+                        equipped at once, and you cannot equip 2 of the same equipment card.</p>
                 </div>
 
                 <div class="card-type">
                     <div class="card-icon">
-                        <img src="assets/icons/reaction.png" alt="Reaction" class="icon-image">
+                        <img src="assets/icons/combat.png" alt="Combat" class="icon-image">
                     </div>
-                    <h3>Reaction Cards</h3>
-                    <p>Use during attack phase when you're the target or the attacker. Perfect for turning the tables!
-                    </p>
+                    <h3>Combat Cards</h3>
+                    <p>Play during attack phase as the attacker or the defender, before the attack roll is rolled. Play
+                        as many as you'd like&mdash;perfect for turning the tables!</p>
                 </div>
 
                 <div class="card-type">
@@ -200,8 +201,20 @@
                         <img src="assets/icons/steed.png" alt="Steed" class="icon-image">
                     </div>
                     <h3>Steeds</h3>
-                    <p>Equip for bonus health and increased movement speed. Movement = dice roll × speed attribute. When
-                        attacked, steed takes damage first.</p>
+                    <p>Kept as a separate face-down STEED DECK. You can only have one steed at a time, in hand or
+                        equipped. An equipped steed takes damage before you do&mdash;if it dies, leftover damage carries
+                        through to you and the steed goes to the bottom of the steed deck.</p>
+                </div>
+
+                <div class="card-type">
+                    <div class="card-icon">
+                        <img src="assets/icons/pet.png" alt="Pet" class="icon-image">
+                    </div>
+                    <h3>Pets</h3>
+                    <p>Equipped just like equipment cards, during setup or your turn before attack phase&mdash;you can
+                        equip as many pets as you want. Pet abilities activate each turn. Pets have their own health and
+                        must be targeted separately from their owner; the attacker chooses how to split damage among
+                        them, so multiple pets can be hit in one attack. At 0 health a pet is discarded.</p>
                 </div>
 
                 <div class="card-type">
@@ -209,8 +222,9 @@
                         <img src="assets/icons/health.png" alt="Health" class="icon-image">
                     </div>
                     <h3>Health Cards</h3>
-                    <p>Play anytime except during attack phase (even when jailed or hogtied!). Cannot heal past maximum
-                        health or heal steeds.</p>
+                    <p>Play at any time to heal damage except during attack phase (even in jail!). You cannot heal past
+                        your starting maximum health. Some health cards have extra abilities, such as negating illness
+                        cards or healing steeds.</p>
                 </div>
 
                 <div class="card-type">
@@ -218,55 +232,87 @@
                         <img src="assets/icons/illness.png" alt="Illness" class="icon-image">
                     </div>
                     <h3>Illness Cards</h3>
-                    <p>Must be revealed immediately when drawn. Negative effects apply to you. If dealt in starting
-                        hand, discard and draw a new card.</p>
+                    <p>Must be revealed as soon as you draw them, and the negative effects apply to whoever drew the
+                        card. If dealt to your starting hand, discard and draw a new card. Illness cards can never be
+                        given away or taken by another player by any means.</p>
+                </div>
+
+                <div class="card-type">
+                    <div class="card-icon">
+                        <img src="assets/icons/money.png" alt="Money" class="icon-image">
+                    </div>
+                    <h3>Money</h3>
+                    <p>Place money cards face up in front of you. Collect $1,000 and reach the Trading Post to pay off
+                        your bounty and win the game. Eliminate a player (or send them to jail) and you take all their
+                        money. Money can be traded or discarded like a normal card, but because it never sits in your
+                        hand it's safe from cards and abilities that steal from a player's hand.</p>
                 </div>
             </div>
 
             <div class="attributes-section">
-                <h3 class="steps-title">Weapon & Card Attributes</h3>
+                <h3 class="steps-title">Weapon Types</h3>
                 <div class="attributes-grid">
                     <div class="attribute-card">
+                        <h4><img src="assets/icons/single.png" alt="Single Wield" class="inline-icon"> Single Wield</h4>
+                        <p>Must be your only equipped weapon.</p>
+                    </div>
+
+                    <div class="attribute-card">
+                        <h4><img src="assets/icons/dual.png" alt="Dual Wield" class="inline-icon"> Dual Wield</h4>
+                        <p>You can have 2 equipped at once (or 1 dual wield and 1 melee).</p>
+                    </div>
+
+                    <div class="attribute-card">
                         <h4><img src="assets/icons/melee.png" alt="Melee" class="inline-icon"> Melee</h4>
-                        <p>Can only be used at distance 0. Can be thrown for max damage in a single hit—target receives
-                            the weapon if hit, discarded if dodged.</p>
+                        <p>You can have 2 equipped at once (or 1 melee and 1 dual wield). A melee weapon can be thrown
+                            from any distance&mdash;if thrown, the opponent takes 1 hit of close range damage and adds
+                            the melee weapon to their hand.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="attributes-section">
+                <h3 class="steps-title">Range Tiers</h3>
+                <p class="section-intro">Every weapon has three range tiers. Distance decides which tier you're firing
+                    in&mdash;and how much damage you deal. Multiply your attack roll by the weapon's damage at that
+                    range.</p>
+                <div class="attributes-grid">
+                    <div class="attribute-card">
+                        <h4><img src="assets/icons/close.png" alt="Close Range" class="inline-icon"> Close</h4>
+                        <p>Usually 0&ndash;1 squares away</p>
                     </div>
 
                     <div class="attribute-card">
-                        <h4><img src="assets/icons/weapon.png" alt="Dual Wield" class="inline-icon"> Dual Wield</h4>
-                        <p>Equip two weapons with this attribute. Declare one as primary, roll normally, then reroll one
-                            die for the second weapon's attack.</p>
+                        <h4><img src="assets/icons/medium.png" alt="Medium Range" class="inline-icon"> Medium</h4>
+                        <p>Usually 2&ndash;3 squares away</p>
                     </div>
 
                     <div class="attribute-card">
-                        <h4><img src="assets/icons/cutrope.png" alt="Cut Rope" class="inline-icon"> Cut Rope</h4>
-                        <p>Can cut rope cards. If equipped, keep the weapon. If in hand, cut the rope but discard the
-                            weapon.</p>
+                        <h4><img src="assets/icons/long.png" alt="Long Range" class="inline-icon"> Long</h4>
+                        <p>Usually 4&ndash;5 squares away</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="attributes-section">
+                <h3 class="steps-title">Card Attributes</h3>
+                <div class="attributes-grid">
+                    <div class="attribute-card">
+                        <h4><img src="assets/icons/speed.png" alt="Speed" class="inline-icon"> Speed</h4>
+                        <p>Steed attribute. Multiply your movement roll by this number to determine your total movement.
+                            Higher speed = greater mobility!</p>
                     </div>
 
                     <div class="attribute-card">
-                        <h4><img src="assets/icons/maxdamage.png" alt="Max Damage" class="inline-icon"> Max Damage</h4>
-                        <p>The maximum damage a weapon can deal in a single attack.</p>
-                    </div>
-
-                    <div class="attribute-card">
-                        <h4><img src="assets/icons/falloff.png" alt="Falloff" class="inline-icon"> Falloff</h4>
-                        <p>Distance penalty. Falloff value × distance from target = total falloff damage reduction.</p>
-                    </div>
-
-                    <div class="attribute-card">
-                        <h4><img src="assets/icons/steed.png" alt="Speed" class="inline-icon"> Speed</h4>
-                        <p>Steed attribute. Your movement = dice roll × speed. Higher speed = greater mobility!</p>
+                        <h4><img src="assets/icons/trample.png" alt="Trample" class="inline-icon"> Trample</h4>
+                        <p>Steed attribute. The damage your steed does to a player you jump over during movement (you
+                            still cannot finish your movement in an occupied space).</p>
                     </div>
 
                     <div class="attribute-card">
                         <h4><img src="assets/icons/health.png" alt="Health" class="inline-icon"> Health</h4>
-                        <p>Health value of cards like steeds. Stacks on top of your health and takes damage first.</p>
-                    </div>
-
-                    <div class="attribute-card">
-                        <h4><img src="assets/icons/rope.png" alt="Rope" class="inline-icon"> Rope</h4>
-                        <p>Indicates a card is a rope restraint that can be cut by weapons with Cut Rope attribute.</p>
+                        <p>The same icon is used on health cards and for steed and pet health. A steed takes damage
+                            before you do; pets are attacked separately.</p>
                     </div>
                 </div>
             </div>
@@ -275,14 +321,14 @@
                 <h3 class="steps-title">What's in the Box</h3>
                 <div class="components-grid">
                     <div class="component">1 Game Board</div>
-                    <div class="component">4 Location Cards</div>
-                    <div class="component">90 Game Cards</div>
-                    <div class="component">2 Six-Sided Dice</div>
+                    <div class="component">5 Location Boards</div>
+                    <div class="component">156 Cards</div>
+                    <div class="component">4 Six-Sided Dice</div>
                     <div class="component">1 Four-Sided Die</div>
-                    <div class="component">10 Player Pieces</div>
-                    <div class="component">10 Player Stands</div>
-                    <div class="component">10 Character Info Cards</div>
-                    <div class="component">1 Rule Booklet</div>
+                    <div class="component">12 Player Pieces</div>
+                    <div class="component">12 Player Stands</div>
+                    <div class="component">12 Character Life Trackers</div>
+                    <div class="component">1 Game Rule Booklet</div>
                 </div>
             </div>
 
@@ -291,7 +337,7 @@
                 <div class="turn-flow">
                     <div class="turn-step">
                         <div class="turn-number">1</div>
-                        <h4>Draw Phase</h4>
+                        <h4>Draw</h4>
                         <p>Start your turn by drawing a card from the deck.</p>
                     </div>
 
@@ -299,46 +345,54 @@
 
                     <div class="turn-step">
                         <div class="turn-number">2</div>
-                        <h4>Action Phase</h4>
-                        <p>Play as many action cards as you want. Switch out weapons, equip weapons, and use equipment
-                            powers. Repeat as many times as you want before attack phase.</p>
+                        <h4>Action</h4>
+                        <p>Play action cards and swap equipped cards. Equip or unequip weapons, equipment, pets, and
+                            steeds, and use equipment and pet abilities.</p>
                     </div>
 
                     <div class="turn-arrow">→</div>
 
                     <div class="turn-step">
                         <div class="turn-number">3</div>
-                        <h4>Movement Phase</h4>
-                        <p>At any point before attack phase, roll the 4-sided die for movement and move according to
-                            movement rules.</p>
+                        <h4>Move</h4>
+                        <p>Roll the 4-sided movement die and move according to the movement rules.</p>
                     </div>
 
                     <div class="turn-arrow">→</div>
 
                     <div class="turn-step">
                         <div class="turn-number">4</div>
-                        <h4>Attack Phase (Optional)</h4>
-                        <p>Declare an attack on a player. Allow them time to play reaction cards, then roll for attack
-                            following attack rules. Once attack phase begins, your turn ends.</p>
+                        <h4>Action</h4>
+                        <p>Play more action cards and swap equipped cards. You can keep taking action steps right up
+                            until you declare attack phase.</p>
                     </div>
 
                     <div class="turn-arrow">→</div>
 
                     <div class="turn-step">
                         <div class="turn-number">5</div>
+                        <h4>Attack</h4>
+                        <p>Select a target and attack! Allow them time to play combat cards, then roll for the attack.
+                            Your turn ends after attack phase.</p>
+                    </div>
+
+                    <div class="turn-arrow">→</div>
+
+                    <div class="turn-step">
+                        <div class="turn-number">6</div>
                         <h4>End Turn</h4>
-                        <p>You can choose to end your turn at any point. At the end of your turn, if you have more than
-                            6 cards, discard down to 6.</p>
+                        <p>At the end of your turn you must discard down to 6 or less cards.</p>
                     </div>
                 </div>
 
                 <div class="turn-notes">
                     <h4>Important Notes:</h4>
                     <ul>
-                        <li>You can end your turn at any point</li>
-                        <li>Attack phase is optional - you don't have to attack</li>
-                        <li>Once you enter attack phase, your turn ends immediately after</li>
-                        <li>Hand limit is 6 cards at end of turn</li>
+                        <li>Every turn normally starts by drawing a card and ends after attack phase</li>
+                        <li>Most cards, other than combat cards, need to be played before attack phase</li>
+                        <li>Movement can happen any time during your turn before attack phase is initiated</li>
+                        <li>Hand limit is 6 cards at the end of your turn</li>
+                        <li>If you want a more symmetrical game, you may play without character abilities</li>
                     </ul>
                 </div>
             </div>
@@ -352,21 +406,31 @@
                     <div class="combat-step">
                         <div class="step-number">1</div>
                         <h4>Declare Target</h4>
-                        <p>Declare your target for attack and allow them time to play reaction cards. As the attacker,
-                            you may also play "Dodge" and dodge equivalent cards (e.g., "Perfect Dodge").</p>
+                        <p>Initiate attack phase by selecting another player&mdash;or that player's pets&mdash;to attack.
+                            Before rolling the dice, allow time for the opponent to play any combat cards, and play your
+                            own combat cards during this time.</p>
                     </div>
 
                     <div class="combat-step">
                         <div class="step-number">2</div>
                         <h4>Roll the Dice</h4>
-                        <p>Roll both 6-sided dice. The numbers rolled indicate the number of shots hit for the attack.
-                            The attacker takes the higher roll, the target takes the lower roll.</p>
+                        <p>Roll 1 die for each weapon involved in the combat. The attacker gets the higher roll(s) and
+                            the defender gets the lower roll(s).</p>
                     </div>
 
                     <div class="combat-step">
                         <div class="step-number">3</div>
+                        <h4>Determine Distance</h4>
+                        <p>Distance is the number of squares BETWEEN you and the target on the shortest path&mdash;take
+                            the larger of the horizontal and vertical distance. That distance sets the range tier each
+                            weapon is firing in.</p>
+                    </div>
+
+                    <div class="combat-step">
+                        <div class="step-number">4</div>
                         <h4>Calculate Damage</h4>
-                        <p>Apply any shots hit modifiers (equipment, etc.) to get total shots hit.</p>
+                        <p>Look up the damage each weapon does at its current range tier on the weapon's damage table,
+                            apply any modifiers to the attack rolls, then multiply.</p>
                     </div>
                 </div>
 
@@ -374,22 +438,42 @@
                     <h4>Damage Calculation Formula</h4>
                     <div class="formula-steps">
                         <div class="formula-step">
-                            <strong>Step 1: Calculate Falloff</strong>
-                            <p>Distance from target × Weapon Falloff = Total Falloff</p>
+                            <strong>Step 1: Find the Range Tier</strong>
+                            <p>Distance to target → CLOSE (0-1), MEDIUM (2-3), or LONG (4-5)</p>
                         </div>
                         <div class="formula-step">
-                            <strong>Step 2: Damage Per Shot</strong>
-                            <p>Max Damage - Total Falloff = Damage Per Shot</p>
+                            <strong>Step 2: Read the Damage Table</strong>
+                            <p>Weapon Damage Table + Range Tier = Damage Per Hit</p>
                         </div>
                         <div class="formula-step">
-                            <strong>Step 3: Total Damage</strong>
-                            <p>Shots Hit × Damage Per Shot = Total Damage</p>
+                            <strong>Step 3: Apply Modifiers to the Roll</strong>
+                            <p>Attack Roll + Modifiers = Final Roll (modifiers apply to all weapons!)</p>
                         </div>
                         <div class="formula-step">
-                            <strong>Step 4: Apply Damage</strong>
-                            <p>Subtract total damage from target's health</p>
+                            <strong>Step 4: Total Damage</strong>
+                            <p>Final Roll × Damage Per Hit = Total Damage</p>
+                        </div>
+                        <div class="formula-step">
+                            <strong>Step 5: Apply Damage</strong>
+                            <p>Subtract total damage from the target's health</p>
                         </div>
                     </div>
+                </div>
+
+                <div class="turn-notes">
+                    <h4>Combat Notes:</h4>
+                    <ul>
+                        <li>Modifiers apply to all weapons involved in the attack</li>
+                        <li>With multiple weapons, assign your dice rolls to each weapon to your liking</li>
+                        <li>Distance is measured BETWEEN players&mdash;if you can move 1 square to occupy the same space
+                            as another player, the distance is 0</li>
+                        <li><strong>Punching:</strong> if you have no weapon equipped you can still punch. This does 1
+                            damage at close range and 0 at all other ranges</li>
+                        <li>Pets must be attacked separately from their owner. When attacking pets, the attacker chooses
+                            how to allocate the damage, so multiple pets can be damaged in 1 attack</li>
+                        <li>An equipped steed takes damage before the player. If the steed dies, leftover damage applies
+                            to the player who rode it</li>
+                    </ul>
                 </div>
             </div>
 
@@ -398,26 +482,34 @@
 
                 <div class="movement-rules">
                     <div class="movement-rule">
-                        <h4>Roll for Movement</h4>
-                        <p>During your turn, use the 4-sided die to get your movement roll.</p>
+                        <h4>1. Roll for Movement</h4>
+                        <p>Roll the 4-sided die to get your base movement roll. Movement can happen any time during your
+                            turn before attack phase is initiated.</p>
                     </div>
 
                     <div class="movement-rule">
-                        <h4>Apply Modifiers</h4>
-                        <p>Apply any buffs to your movement (steeds, equipment, etc.) to get your final maximum
-                            movement.</p>
+                        <h4>2. Apply Modifiers</h4>
+                        <p>Apply any movement modifiers&mdash;any cards or abilities that are not steed related, such as
+                            the +2 from "Lucky Boots".</p>
+                    </div>
+
+                    <div class="movement-rule">
+                        <h4>3. Multiply by Steed Speed</h4>
+                        <p>Finally, multiply that number by the SPEED of your equipped steed, if you have one. This is
+                            the total number of spaces you can move this turn.</p>
                     </div>
 
                     <div class="movement-rule">
                         <h4>Free Direction</h4>
-                        <p>You can move in any direction you would like and even change directions throughout your
-                            movement. Move horizontally, vertically, and diagonally.</p>
+                        <p>You can move in any direction&mdash;vertical, horizontal, or diagonal&mdash;and change
+                            direction during movement. You do not need to move your entire movement roll.</p>
                     </div>
 
                     <div class="movement-rule">
                         <h4>Movement Restrictions</h4>
-                        <p>You cannot move through a square occupied by another player and you cannot land in a square
-                            occupied by another player.</p>
+                        <p>You cannot move through or land in occupied spaces. The exception is a steed with TRAMPLE,
+                            which can move through an occupied space and inflict trample damage on that
+                            player&mdash;though you still cannot finish your movement there.</p>
                     </div>
                 </div>
             </div>
@@ -426,9 +518,15 @@
                 <h3 class="steps-title">Winning the Game</h3>
                 <div class="winning-content">
                     <div class="win-condition">
-                        <h4>Victory Condition</h4>
+                        <h4>Last Slinger Standing</h4>
                         <p>To win the game, you must be the last person standing. When a player's health hits 0, they
                             are no longer in the game.</p>
+                    </div>
+
+                    <div class="win-condition">
+                        <h4>Pay Off Your Bounty</h4>
+                        <p>You can also win the game by collecting $1,000 and returning to the Trading Post to pay off
+                            your bounty.</p>
                     </div>
 
                     <div class="tie-condition">
@@ -459,6 +557,13 @@
 
                     <div class="death-step">
                         <div class="step-number">3</div>
+                        <h4>Collect the Money</h4>
+                        <p>When you eliminate another player, you collect all of their money. When you send someone to
+                            jail, you also collect all of their money unless they avoid jail.</p>
+                    </div>
+
+                    <div class="death-step">
+                        <div class="step-number">4</div>
                         <h4>Clean Up</h4>
                         <p>Discard any extra cards from the dead player. Make sure every player discards back down to 6
                             or less cards.</p>
@@ -480,11 +585,10 @@
                             <li>A player may only enter jail if sent there by a card</li>
                             <li>While in jail, you can only use health cards or cards that can be used to get out of
                                 jail</li>
-                            <li>Get out of jail cards must be used as soon as you enter jail</li>
-                            <li>The standard jail sentence is 1 turn unless specified otherwise</li>
+                            <li>Get out of jail cards must be used BEFORE being sent to jail to avoid your sentence</li>
                             <li>Cards that change your location (e.g., "Last Call") can get you out of jail if used by
                                 another player</li>
-                            <li>You can be attacked while in jail</li>
+                            <li>You can be attacked while in jail, but you do not counterattack</li>
                             <li>After the player who sent you to jail completes their next turn, your sentence is over
                                 and you must move 1 square to leave the jail</li>
                         </ul>
@@ -496,9 +600,13 @@
                         </div>
                         <h4>Trading Post</h4>
                         <ul class="location-rules">
-                            <li>Trading in the game is only allowed if both players are in the trading post</li>
-                            <li>Players can freely enter and leave the trading post</li>
-                            <li>Players cannot attack or be attacked while in the trading post</li>
+                            <li>Players can freely enter and leave the Trading Post</li>
+                            <li>During your turn, if in the Trading Post, you may trade cards with other players in the
+                                Trading Post</li>
+                            <li>No combat is allowed involving players in the Trading Post</li>
+                            <li>If you spend more than 5 turns in the Trading Post, you must leave and are not allowed
+                                back in the Trading Post</li>
+                            <li>Return here with $1,000 to pay off your bounty and win the game</li>
                         </ul>
                     </div>
 
@@ -508,10 +616,10 @@
                         </div>
                         <h4>Saloon</h4>
                         <ul class="location-rules">
-                            <li>Players can freely enter and leave the saloon</li>
-                            <li>While in the saloon during your turn, you may discard as many cards as you would like
-                                and receive 5 health for each card you discard</li>
-                            <li>Players in the saloon can only attack and be attacked by other players in the saloon
+                            <li>Players can freely enter and leave the Saloon</li>
+                            <li>While in the Saloon you may discard as many cards as you would like and receive 5 health
+                                for each card you discard. You can only do this during your turn</li>
+                            <li>Players in the Saloon can only attack and be attacked by other players in the Saloon
                             </li>
                         </ul>
                     </div>
@@ -520,12 +628,12 @@
                         <div class="location-icon">
                             <img src="assets/buildings/stable.png" alt="Stable" class="location-image">
                         </div>
-                        <h4>Stable</h4>
+                        <h4>Stables</h4>
                         <ul class="location-rules">
-                            <li>Players can freely enter and leave the stable</li>
-                            <li>While in the stable during your turn, you may discard a card to draw a steed card from
-                                the steed deck</li>
-                            <li>All combat is allowed in the stable</li>
+                            <li>Players can freely enter and leave the Stables</li>
+                            <li>During your turn, if in the Stables, you may discard a card to draw the top card from the
+                                STEED DECK</li>
+                            <li>All combat is allowed into, out of, and in the Stables</li>
                         </ul>
                     </div>
 
@@ -535,40 +643,36 @@
                         </div>
                         <h4>Jack's Firearm Emporium</h4>
                         <ul class="location-rules">
-                            <li>Players can freely enter and leave Jack's Firearm Emporium</li>
-                            <li>While in the emporium during your turn, you can discard 3 cards to go through the deck
-                                and choose any weapon card to add to your hand. Shuffle the deck after this</li>
-                            <li>Players can attack and be attacked by anyone in Jack's Firearm Emporium</li>
+                            <li>Players can freely enter and leave Jack's</li>
+                            <li>During your turn, if in Jack's, you may discard 3 cards to go through the deck and add a
+                                WEAPON of your choice to your hand</li>
+                            <li>All combat is allowed into, out of, and in Jack's</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="showdown-steps">
-                <h3 class="steps-title">How a Round Works</h3>
-                <div class="round-flow">
-                    <div class="round-step">
-                        <div class="round-number">1</div>
-                        <h4>Starting the Round</h4>
-                        <p>Each player ensures they have 99 health. Refresh any used cards. Determine first player if
-                            not already decided.</p>
+            <div class="attributes-section">
+                <h3 class="steps-title">Confusing Cards</h3>
+                <p class="section-intro">There's only so much room on a card, so some descriptions can be confusing.
+                    Here's a little extra clarity.</p>
+                <div class="attributes-grid">
+                    <div class="attribute-card">
+                        <h4>Lucky Hat</h4>
+                        <p>The "hat hand" gets passed to the other player in the event "Lucky Hat" is stolen. Both hands
+                            get combined when you die for looting purposes, so the "hat hand" is reset on death.</p>
                     </div>
 
-                    <div class="round-arrow">→</div>
-
-                    <div class="round-step">
-                        <div class="round-number">2</div>
-                        <h4>Player Turns</h4>
-                        <p>Players take turns in order. On your turn, follow the steps in "Taking Your Turn".</p>
+                    <div class="attribute-card">
+                        <h4>Bounty</h4>
+                        <p>The player who plays "Bounty" does NOT attempt an attack on the chosen player. Only the other
+                            players attempt the attack.</p>
                     </div>
 
-                    <div class="round-arrow">→</div>
-
-                    <div class="round-step">
-                        <div class="round-number">3</div>
-                        <h4>Ending the Round</h4>
-                        <p>The round ends when a player reaches 0 health or after a set number of turns. Determine
-                            rewards or penalties.</p>
+                    <div class="attribute-card">
+                        <h4>Double Barrel Shotgun</h4>
+                        <p>The "Double Barrel Shotgun" shoots 2 shells. Roll a 5 or above and they both hit for 40
+                            damage. A 3 or 4 is 20 damage. Below a 3 is 0 damage.</p>
                     </div>
                 </div>
             </div>
@@ -578,7 +682,8 @@
     <section id="slingers" class="section slingers-section">
         <div class="container">
             <h2 class="section-title">The Slingers</h2>
-            <p class="section-intro">Ten unique gunslingers, each with their own story, style, and reason to fight</p>
+            <p class="section-intro">Twelve unique gunslingers, each with their own story, style, and reason to fight
+            </p>
             <p class="section-hint"
                 style="text-align: center; color: var(--accent-gold); font-size: 1.1rem; margin-bottom: 2rem; font-weight: bold;">
                 Tap any character card to reveal their special abilities
@@ -602,10 +707,10 @@
                         <div class="slinger-card-back">
                             <div class="ability-content">
                                 <h3 class="slinger-name">Menk</h3>
-                                <h4 class="ability-title">Special Ability</h4>
-                                <p class="ability-text">When involved in combat, roll a 6-sided die:<br><br>
-                                    1-4: Nothing happens<br>
-                                    5+: Dodge the attack avoiding all incoming damage and draw a card</p>
+                                <h4 class="ability-title">Cunning Dodge</h4>
+                                <p class="ability-text">Whenever in combat, roll a 6-sided die:<br><br>
+                                    1-4: nothing<br>
+                                    5+: dodge full attack and draw a card</p>
                             </div>
                         </div>
                     </div>
@@ -630,13 +735,11 @@
                             <div class="ability-content">
                                 <h3 class="slinger-name">Daliore</h3>
                                 <h4 class="ability-title">Special Ability</h4>
-                                <p class="ability-text">No limit on equipment cards.<br><br>
-                                    Once per turn you may discard a card a roll a 6-sided dice:<br>
-				    1-2: nothing<br>
-				    3-4: draw 1 card<br>
-				    5: draw 2 cards<br>
-	   			    6: draw 3 cards
-				</p>
+                                <p class="ability-text">No limit on equipment cards<br><br>
+                                    Once per turn: discard a card to roll a 6-sided die:<br>
+                                    1-3: draw a card<br>
+                                    4-5: draw 2 cards<br>
+                                    6: draw 3 cards</p>
                             </div>
                         </div>
                     </div>
@@ -661,9 +764,9 @@
                             <div class="ability-content">
                                 <h3 class="slinger-name">Sabja</h3>
                                 <h4 class="ability-title">Special Ability</h4>
-                                <p class="ability-text">Punches do 3 damage<br><br>
-                                    +1 damage with melee weapons<br><br>
-                                    +1 to movement roll for each equipped melee weapon</p>
+                                <p class="ability-text">Cannot be hit if distance is 0<br><br>
+                                    +1 to attack roll for each melee weapon<br><br>
+                                    Punches do 3 damage</p>
                             </div>
                         </div>
                     </div>
@@ -688,9 +791,10 @@
                             <div class="ability-content">
                                 <h3 class="slinger-name">Ruby</h3>
                                 <h4 class="ability-title">Special Ability</h4>
-                                <p class="ability-text">Discard a card in the saloon for +10 health<br><br>
-                                    If last call is played go through the deck and pick any card then reshuffle<br><br>
-                                    +1 to attack roll if in the saloon</p>
+                                <p class="ability-text">When in the saloon:<br>
+                                    +2 to attack roll<br>
+                                    Discard a card for 10 health<br><br>
+                                    When "Last Call" is played, go through the deck and add 1 card to your hand</p>
                             </div>
                         </div>
                     </div>
@@ -715,8 +819,8 @@
                             <div class="ability-content">
                                 <h3 class="slinger-name">Noises</h3>
                                 <h4 class="ability-title">Special Ability</h4>
-                                <p class="ability-text">You may re-roll 1 dice per turn<br><br>
-                                    When attacking, if roll is 6+, close tier damage is used.</p>
+                                <p class="ability-text">Once per turn, you can re-roll any dice<br><br>
+                                    If attack roll, including modifiers, is 6+: use close range damage</p>
                             </div>
                         </div>
                     </div>
@@ -743,8 +847,8 @@
                                 <h4 class="ability-title">Special Ability</h4>
                                 <p class="ability-text">Can use "Double Barrel Shotgun" from up to 5 squares
                                     away<br><br>
-                                    +2 to attack roll when "Double Barrel Shotgun" is equipped<br><br>
-                                    +1 to movement roll if not equipped</p>
+                                    +2 to attack roll with "Double Barrel Shotgun"<br><br>
+                                    +2 to movement roll without "Double Barrel Shotgun"</p>
                             </div>
                         </div>
                     </div>
@@ -769,9 +873,10 @@
                             <div class="ability-content">
                                 <h3 class="slinger-name">Fereen</h3>
                                 <h4 class="ability-title">Special Ability</h4>
-                                <p class="ability-text">Discard any card to leave jail<br><br>
-                                    Any time you deal damage to another player, attacked player must give you a card of
-                                    their choice (excluding illness cards).</p>
+                                <p class="ability-text">If you deal 15+ damage during combat, steal a random card from
+                                    the opponent's hand<br><br>
+                                    If the player has money you may steal a cash card instead<br><br>
+                                    Discard any card to avoid jail</p>
                             </div>
                         </div>
                     </div>
@@ -795,8 +900,8 @@
                             <div class="ability-content">
                                 <h3 class="slinger-name">Ghala</h3>
                                 <h4 class="ability-title">Special Ability</h4>
-                                <p class="ability-text">+1 squares to each range tier<br>
-                                    +1 to attack roll when wielding a single weapon.</p>
+                                <p class="ability-text">+1 squares to each range tier<br><br>
+                                    +1 to attack roll when wielding a single weapon</p>
                             </div>
                         </div>
                     </div>
@@ -820,9 +925,9 @@
                             <div class="ability-content">
                                 <h3 class="slinger-name">Panch</h3>
                                 <h4 class="ability-title">Special Ability</h4>
-                                <p class="ability-text">-2 to movement roll<br><br>
-                                    -2 to opponents attack roll<br><br>
-                                    No hand limit</p>
+                                <p class="ability-text">No hand limit<br><br>
+                                    -2 to movement roll<br><br>
+                                    -2 to opponent's attack roll</p>
                             </div>
                         </div>
                     </div>
@@ -846,8 +951,8 @@
                             <div class="ability-content">
                                 <h3 class="slinger-name">Treech</h3>
                                 <h4 class="ability-title">Special Ability</h4>
-                                <p class="ability-text">Can roll for movement before or after attacking<br><br>
-                                    Draw an additional card each turn</p>
+                                <p class="ability-text">Draw an additional card each turn<br><br>
+                                    You may take movement step before AND after attack phase</p>
                             </div>
                         </div>
                     </div>
@@ -861,18 +966,20 @@
                             </div>
                             <div class="slinger-info">
                                 <h3 class="slinger-name">Boone</h3>
-                                <p class="slinger-bio">Coming Soon... This mysterious Slinger's story will be revealed
-                                    in future updates. Stay tuned to learn about their past and what drives them to the
-                                    duel.</p>
+                                <p class="slinger-bio">As an orphan, he grew up living in the stables as the stable boy.
+                                    Sleeping every night among the horses, giving him a special bond with all the steeds
+                                    in town. When his Trusty Steed got sick, he robbed a train passing through town to
+                                    afford medicine since the owner thought the horse was too old anyways. Get him a
+                                    mount and he is unstoppable.</p>
                             </div>
                         </div>
                         <div class="slinger-card-back">
                             <div class="ability-content">
                                 <h3 class="slinger-name">Boone</h3>
                                 <h4 class="ability-title">Special Ability</h4>
-                                <p class="ability-text">+1 <img src="assets/icons/steed.png" alt="Speed"
-                                        class="inline-icon"> to steeds<br><br>
-                                    +1 to attack roll when on a steed<br><br>
+                                <p class="ability-text">When mounted on a steed:<br>
+                                    +1 to your steed<br>
+                                    +1 to attack roll<br><br>
                                     Choose from the top 3 cards when drawing from the steed deck</p>
                             </div>
                         </div>
@@ -887,18 +994,19 @@
                             </div>
                             <div class="slinger-info">
                                 <h3 class="slinger-name">Sage</h3>
-                                <p class="slinger-bio">Coming Soon... This mysterious Slinger's story will be revealed
-                                    in future updates. Stay tuned to learn about their past and what drives them to the
-                                    duel.</p>
+                                <p class="slinger-bio">Growing up with Pancha as her father was not always easy. She
+                                    tended to find more love with animals than her family. Now grown up, her and her
+                                    bird, Canyon, silently roam the desert from town to town punishing anyone who brings
+                                    harm to other creatures. Currently wanted for killing a group of hunters.</p>
                             </div>
                         </div>
                         <div class="slinger-card-back">
                             <div class="ability-content">
                                 <h3 class="slinger-name">Sage</h3>
                                 <h4 class="ability-title">Special Ability</h4>
-                                <p class="ability-text">Cannot be sent to jail<br><br>
-                                    Rope cards do not affect her<br><br>
-                                    Pet abilities may be used twice per turn</p>
+                                <p class="ability-text">When in combat: if opponent uses a combat card, choose 1 for
+                                    Canyon to counter<br><br>
+                                    Pet abilities activate twice</p>
                             </div>
                         </div>
                     </div>

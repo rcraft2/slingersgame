@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Countdown Timer for Kickstarter Launch
     function updateCountdown() {
         // Use ISO format for better cross-browser compatibility
-        const launchDate = new Date('2026-12-12T00:00:00').getTime();
+        const launchDate = new Date('2026-12-08T00:00:00').getTime();
         const now = new Date().getTime();
         const distance = launchDate - now;
 

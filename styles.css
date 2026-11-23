@@ -5,23 +5,24 @@
 }
 
 :root {
-    --primary-color: #1a0f0a;
-    --secondary-color: #7a3c14;
-    --accent-color: #c9a575;
-    --accent-gold: #d4a23b;
-    --accent-blood: #8b1a1a;
-    --text-light: #f0e6d4;
-    --text-dark: #1a0f0a;
-    --bg-light: #ebe3d4;
-    --bg-dark: #2b1d12;
-    --bg-bone: #f5ede0;
+    --primary-color: #1e0f24;
+    --secondary-color: #c4245f;
+    --accent-color: #f79a6b;
+    --accent-gold: #f2b416;
+    --accent-blood: #d62d3a;
+    --accent-orange: #f0682e;
+    --text-light: #fff1e4;
+    --text-dark: #1e0f24;
+    --bg-light: #fde3d3;
+    --bg-dark: #2d1538;
+    --bg-bone: #fff4ea;
     --font-display: 'Rye', 'Georgia', serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
     --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
     --shadow-dark: 0 8px 24px rgba(0, 0, 0, 0.4);
-    --border-subtle: 1px solid rgba(139, 69, 19, 0.12);
+    --border-subtle: 1px solid rgba(196, 36, 95, 0.15);
     --border-subtle-dark: 1px solid rgba(244, 197, 66, 0.18);
 }
 
@@ -49,7 +50,7 @@ html {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(44, 24, 16, 0.95);
+    background: rgba(30, 15, 36, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -60,7 +61,7 @@ html {
     position: fixed;
     top: 82px;
     width: 100%;
-    background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-color) 100%);
+    background: linear-gradient(100deg, var(--accent-gold) 0%, var(--accent-orange) 50%, #e8507a 100%);
     z-index: 999;
     padding: 1rem 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -90,7 +91,7 @@ html {
 }
 
 .countdown-link:hover {
-    color: var(--secondary-color);
+    color: var(--text-light);
 }
 
 .countdown-timer {
@@ -182,78 +183,16 @@ html {
 }
 
 .hero {
-    min-height: 120vh;
-    background:
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 400' preserveAspectRatio='none'%3E%3Cpath d='M0,400 L0,300 L100,280 L220,315 L340,255 L460,300 L580,270 L700,295 L820,250 L940,290 L1060,270 L1200,295 L1200,400 Z' fill='%23000000'/%3E%3C/svg%3E") bottom center / 100% 38% no-repeat,
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 300' preserveAspectRatio='none'%3E%3Cpath d='M0,300 L0,200 L120,150 L230,180 L360,90 L490,140 L630,80 L770,130 L900,100 L1040,150 L1180,120 L1200,140 L1200,300 Z' fill='%231a0f0a' opacity='0.6'/%3E%3C/svg%3E") bottom center / 100% 32% no-repeat,
-        linear-gradient(180deg,
-            #0d0814 0%,
-            #1a1018 20%,
-            #2b1d12 45%,
-            #5a2410 70%,
-            #a0481a 88%,
-            #d4a23b 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: var(--primary-color);
+    padding: 250px 0 2.5rem;
     text-align: center;
-    padding: 2rem;
-    padding-top: 250px;
-    position: relative;
-    overflow: hidden;
 }
 
-.hero::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    opacity: 0.18;
-    mix-blend-mode: overlay;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse 85% 100% at center 55%, transparent 25%, rgba(0, 0, 0, 0.45) 80%, rgba(0, 0, 0, 0.75) 100%);
-    pointer-events: none;
-    z-index: 1;
-}
-
-.hero-content {
-    animation: fadeInUp 1s ease-out;
-    position: relative;
-    z-index: 2;
-}
-
-.hero-title {
-    font-size: 5.5rem;
-    color: var(--accent-gold);
-    margin-bottom: 1rem;
-    letter-spacing: 4px;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
-    font-family: var(--font-display);
-    font-weight: 400;
-}
-
-.hero-tagline {
-    font-size: 1.5rem;
-    color: var(--text-light);
-    margin-bottom: 0.5rem;
-    font-family: var(--font-display);
-    letter-spacing: 1px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.hero-subtitle {
-    font-size: 1.2rem;
-    color: var(--accent-color);
-    margin-bottom: 2rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+.hero-banner {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
 }
 
 .hero-buttons {
@@ -285,7 +224,7 @@ html {
 
 .cta-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 24px rgba(212, 162, 59, 0.4);
+    box-shadow: 0 10px 24px rgba(242, 180, 22, 0.4);
 }
 
 .cta-secondary {
@@ -477,6 +416,10 @@ html {
     color: var(--accent-gold);
 }
 
+.cards-showcase > .steps-title {
+    grid-column: 1 / -1;
+}
+
 .steps-title {
     text-align: center;
     font-size: 2rem;
@@ -586,8 +529,8 @@ html {
 .slinger-card:hover .slinger-card-back {
     box-shadow:
         inset 0 0 0 1px var(--accent-gold),
-        inset 0 0 0 4px #1a0f0a,
-        inset 0 0 0 5px rgba(212, 162, 59, 0.9),
+        inset 0 0 0 4px var(--primary-color),
+        inset 0 0 0 5px rgba(242, 180, 22, 0.9),
         inset 0 0 60px rgba(0, 0, 0, 0.55),
         0 20px 36px rgba(0, 0, 0, 0.65);
 }
@@ -634,15 +577,15 @@ html {
 
 .slinger-card-front {
     background:
-        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(122, 60, 20, 0.45) 0%, transparent 70%),
-        linear-gradient(180deg, #3d2817 0%, #1f130b 100%);
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(196, 36, 95, 0.4) 0%, transparent 70%),
+        linear-gradient(180deg, #3a1d48 0%, #1e0f24 100%);
     display: flex;
     flex-direction: column;
     padding: 6px;
     box-shadow:
         inset 0 0 0 1px var(--accent-gold),
-        inset 0 0 0 4px #1a0f0a,
-        inset 0 0 0 5px rgba(212, 162, 59, 0.7),
+        inset 0 0 0 4px var(--primary-color),
+        inset 0 0 0 5px rgba(242, 180, 22, 0.7),
         inset 0 0 60px rgba(0, 0, 0, 0.55),
         0 12px 28px rgba(0, 0, 0, 0.55);
 }
@@ -660,8 +603,8 @@ html {
 
 .slinger-card-back {
     background:
-        radial-gradient(ellipse at center, rgba(212, 162, 59, 0.18) 0%, transparent 65%),
-        linear-gradient(135deg, #3d2817 0%, var(--primary-color) 100%);
+        radial-gradient(ellipse at center, rgba(242, 180, 22, 0.18) 0%, transparent 65%),
+        linear-gradient(135deg, #3a1d48 0%, var(--primary-color) 100%);
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
     display: flex;
@@ -670,8 +613,8 @@ html {
     padding: 2rem;
     box-shadow:
         inset 0 0 0 1px var(--accent-gold),
-        inset 0 0 0 4px #1a0f0a,
-        inset 0 0 0 5px rgba(212, 162, 59, 0.7),
+        inset 0 0 0 4px var(--primary-color),
+        inset 0 0 0 5px rgba(242, 180, 22, 0.7),
         inset 0 0 60px rgba(0, 0, 0, 0.55),
         0 12px 28px rgba(0, 0, 0, 0.55);
 }
@@ -830,7 +773,7 @@ html {
 }
 
 .footer {
-    background: #1a0f0a;
+    background: var(--primary-color);
     color: var(--accent-color);
     text-align: center;
     padding: 2rem;
@@ -998,25 +941,19 @@ html {
     transform-origin: center bottom;
 }
 
-.hero-logo {
-    max-width: 500px;
-    width: 80%;
-    height: auto;
-    margin-bottom: 1rem;
-    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.7));
-}
-
 .icon-image {
-    width: 60px;
-    height: 60px;
+    width: 120px;
+    height: 120px;
     object-fit: contain;
+    mix-blend-mode: multiply;
 }
 
 .inline-icon {
-    width: 24px;
-    height: 24px;
+    width: 48px;
+    height: 48px;
     vertical-align: middle;
     margin-right: 0.5rem;
+    mix-blend-mode: multiply;
 }
 
 @keyframes fadeInUp {
@@ -1051,7 +988,7 @@ html {
 }
 
 .navbar-scrolled {
-    background: rgba(26, 15, 10, 0.98);
+    background: rgba(30, 15, 36, 0.98);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -1065,7 +1002,7 @@ html {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background: rgba(44, 24, 16, 0.98);
+        background: rgba(30, 15, 36, 0.98);
         width: 100%;
         text-align: center;
         transition: 0.3s;
@@ -1098,17 +1035,8 @@ html {
         font-size: 0.7rem;
     }
 
-    .hero-title {
-        font-size: 2.75rem;
-        letter-spacing: 2px;
-    }
-
-    .hero-tagline {
-        font-size: 1.1rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1rem;
+    .hero {
+        padding-top: 230px;
     }
 
     .section-title {
@@ -1117,10 +1045,6 @@ html {
 
     .legend-content {
         grid-template-columns: 1fr;
-    }
-
-    .hero-logo {
-        max-width: 300px;
     }
 }
 
@@ -1134,7 +1058,7 @@ html {
 }
 
 .slinger-name {
-    background: linear-gradient(180deg, var(--accent-gold) 0%, #a87f1d 100%);
+    background: linear-gradient(180deg, var(--accent-gold) 0%, #e0861a 100%);
     color: var(--primary-color);
     margin: 0 0.5rem;
     padding: 0.5rem 1rem;
@@ -1143,8 +1067,8 @@ html {
     font-weight: 400;
     text-align: center;
     letter-spacing: 1px;
-    border-top: 1px solid rgba(26, 15, 10, 0.35);
-    border-bottom: 1px solid rgba(26, 15, 10, 0.35);
+    border-top: 1px solid rgba(30, 15, 36, 0.35);
+    border-bottom: 1px solid rgba(30, 15, 36, 0.35);
     box-shadow:
         0 1px 3px rgba(0, 0, 0, 0.5),
         inset 0 1px 0 rgba(255, 240, 200, 0.4);
@@ -1170,11 +1094,11 @@ html {
     margin: 0.75rem;
     padding: 0.75rem;
     background:
-        radial-gradient(ellipse at center, #e0c08e 0%, #b8915c 100%);
+        radial-gradient(ellipse at center, #ffd9b8 0%, #f3a679 100%);
     border-radius: 4px;
     box-shadow:
-        inset 0 0 0 1px rgba(212, 162, 59, 0.9),
-        inset 0 0 0 2px rgba(26, 15, 10, 0.4),
+        inset 0 0 0 1px rgba(242, 180, 22, 0.9),
+        inset 0 0 0 2px rgba(30, 15, 36, 0.4),
         inset 0 -8px 18px rgba(0, 0, 0, 0.18),
         inset 0 4px 12px rgba(255, 240, 200, 0.25);
     position: relative;
